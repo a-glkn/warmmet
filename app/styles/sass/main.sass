@@ -1,0 +1,325 @@
+@use 'sass:math'
+@use 'sass:color'
+
+@import config
+@import 'blocks/**/*'
+
+
+.section-intro
+    height: 1112px
+    display: flex
+    width: 100%
+    position: relative
+    .wrapper
+        width: 100%
+        position: relative
+        z-index: 1
+        color: #fff
+        margin: auto 0
+        .btn
+            margin-bottom: 20px
+            width: 449px
+    .main-slider
+        height: 1112px
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        &__item
+            height: 1112px
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+
+        .swiper-button-prev, .swiper-button-next
+            width: 50px
+            height: 50px
+            position: absolute
+            left: 50%
+            margin-top: -25px
+            bottom: 90px
+            top: auto
+            svg
+                path, rect
+                    transition: .3s ease
+            &:after
+                display: none
+
+            &:hover
+                svg
+                    path, rect
+                        stroke: $accent
+
+        .swiper-button-prev
+            transform: rotate(180deg)
+
+        .swiper-button-prev
+            margin-left: -560px
+        .swiper-button-next
+            margin-left: -160px
+
+        .swiper-pagination
+            width: 449px
+            display: flex
+            justify-content: center
+            position: absolute
+            bottom: 114px
+            left: 50%
+            margin-left: -560px
+            .swiper-pagination-bullet
+                background-color: rgba(255,255,255,.5) !important
+                height: 2px
+                width: 80px
+                border-radius: 0
+                opacity: 1 !important
+                &-active
+                    background-color: #fff !important
+
+
+                
+    
+    .features
+        padding: 15px 20px
+        background-color: rgba(255,255,255, .15)
+        border-radius: 5px
+        margin-top: 40px
+        margin-bottom: 40px
+        width: 449px
+        &__item
+            display: flex
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+            &-icon
+                width: 40px
+                height: 40px
+                margin-right: 10px
+                margin-top: auto
+                margin-bottom: auto
+            &-text
+                font-style: normal
+                font-weight: 500
+                font-size: 20px
+                line-height: 39px
+                color: #FFFFFF
+                margin-top: auto
+                margin-bottom: auto
+
+.section-catalog
+    padding-top: 60px
+    padding-bottom: 60px
+    .heading
+        color: #4F4C4D
+        margin-bottom: 40px
+
+.section-about
+    padding-top: 60px
+    .about
+        padding-bottom: 40px
+        border-bottom: 1px solid rgba(79, 76, 77, .5)
+        img
+            max-width: 100%
+            height: auto
+        .heading-name
+            font-style: normal
+            font-weight: 700
+            font-size: 48px
+            line-height: 74px
+            text-transform: uppercase
+            color: #F14624
+            margin-bottom: 19px
+            span
+                color: #4F4C4D
+
+        .heading
+            margin-bottom: 13px
+        p
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 25px
+        .btn
+            margin-top: 27px
+
+.section-contacts
+    padding-top: 80px
+    padding-bottom: 80px
+    .heading_sm
+        margin-top: 90px
+    .tab-head
+        display: flex
+        position: relative
+        top: 60px
+        &__item
+            cursor: pointer
+            width: 50%
+            padding: 15px 0
+            text-align: center
+            font-style: normal
+            font-weight: 700
+            font-size: 18px
+            line-height: 160%
+            color: rgba(241, 70, 36, .5)
+            height: 60px
+            transition: .3s ease
+            border-bottom: 1px solid transparent
+            &:hover
+                color: rgba(241, 70, 36, 1)
+            &.active
+                color: rgba(241, 70, 36, 1)
+                border-bottom: 1px solid #F14624
+    .tabs-content
+        &__item
+            display: none
+            &.active
+                display: block
+
+    .soc
+        display: flex
+        margin-left: 40px
+        margin-top: 10px
+        li
+            margin-right: 20px
+    .contact
+        position: relative
+        padding-left: 40px
+        margin-top: 30px
+        &__icon
+            position: absolute
+            top: 0
+            left: 0
+            width: 30px
+            height: 30px
+
+        &__title
+            font-style: normal
+            font-weight: 600
+            font-size: 20px
+            line-height: 130%
+            color: #4F4C4D
+            margin-bottom: 20px
+            a   
+                color: #4F4C4D
+                text-decoration: none
+                transition: .3s ease
+                &:hover
+                    color: $accent
+
+
+
+        &__content
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            line-height: 130%
+            color: #4F4C4D
+            a   
+                color: #4F4C4D
+                text-decoration: none
+                transition: .3s ease
+                &:hover
+                    color: $accent
+
+
+    
+.section-balls
+    padding-top: 60px
+    padding-bottom: 20px
+    .heading
+        margin-bottom: 40px
+
+.section-capture
+    padding-top: 160px
+    padding-bottom: 160px
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    background-image: url(../images/dist/capture.jpg)
+    .heading
+        margin-bottom: 20px
+    .form
+        margin-top: 30px
+
+.section-hits
+    padding-top: 60px
+    padding-bottom: 20px
+    .heading
+        margin-bottom: 40px
+.section-social
+    padding-top: 100px
+    padding-bottom: 60px
+    img
+        max-width: 100%
+        height: auto
+    .heading
+        margin-bottom: 30px
+    .btns
+        margin-top: 40px
+        display: flex
+        justify-content: space-between
+        .btn
+            width: calc(50% - 10px)
+
+
+.cat
+    display: block
+    margin-bottom: 40px
+    text-decoration: none !important
+    text-align: center
+    img
+        max-width: 100%
+        height: auto
+    &__title
+        font-style: normal
+        font-weight: 500
+        font-size: 20px
+        line-height: 130%
+        color: #4F4C4D
+        margin-top: 19px
+        text-align: center
+        transition: .3s ease
+    &__price
+        font-style: normal
+        font-weight: 700
+        font-size: 18px
+        line-height: 1.55
+        text-align: center
+        color: #F14624
+        margin-top: 10px
+    &__note
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 1.55
+        text-align: center
+        color: #000000
+        margin-top: 10px
+    &:hover
+        .cat
+            &__title
+                color: $accent
+
+    &_sm
+        .cat
+            &__title
+                font-size: 18px
+                font-weight: 400
+        
+
+.section-gallery
+    padding-top: 60px
+    padding-bottom: 40px
+    .cat
+        margin-bottom: 20px
+    .heading
+        margin-bottom: 40px
+
++media-breakpoint-down(xl) 
+    
++media-breakpoint-down(lg)
+    
++media-breakpoint-down(md)
+    
++media-breakpoint-down(sm)
+    
+

@@ -1,0 +1,153 @@
+// COLORS
+.text-accent
+    color: $accent !important
+.bg-grey
+    background-color: #FCF6F4
+
+.bg-grey-2
+    background-color: #F7F7F7
+    
+    
+// GENERAL PROJECT STYLES
+.text-center
+    text-align: center
+
+.btn
+    padding: 16px 20px
+    background: #F14624
+    font-style: normal
+    font-weight: 400
+    font-size: 18px
+    line-height: 160%
+    text-align: center
+    color: #FFFFFF
+    border: 0
+    transition: .3s ease
+    border-radius: 5px
+    display: inline-block
+    cursor: pointer
+    &_w-100p
+        width: 100%
+    &:hover
+        opacity: 0.9
+
+    &_light
+        background-color: transparent
+        border: 1px solid #FFFFFF
+        &:hover
+            opacity: 1
+            color: $accent
+            border-color: $accent
+
+    &_sm
+        padding: 10px 37px
+
+    &_light-2
+        color: #4F4C4D
+        border: 1px solid #4F4C4D
+        background-color: #fff
+        &:hover
+            opacity: 1
+            color: $accent
+            border-color: $accent
+
+    &_light-3
+        color: $accent
+        border: 1px solid $accent
+        background-color: transparent
+        &:hover
+            opacity: 1
+            color: #fff
+            border-color: #fff
+            background-color: $accent
+
+
+a.btn
+    text-decoration: none !important
+
+
+.inverted
+    *
+        color: #fff
+
+p
+    margin: 0
+
+// HEADINGS
+.heading
+    font-style: normal
+    line-height: 130%
+    &_lg
+        font-size: 50px
+        font-weight: 700
+    &_md
+        font-size: 36px
+        font-weight: 700
+    &_sm
+        font-style: normal
+        font-weight: 700
+        font-size: 24px
+        color: #4F4C4D
+
+
+.form
+    &__input
+        padding-left: 25px
+        padding-right: 25px
+        width: 100%
+        height: 57px
+        transition: .3s ease
+        border: 1px solid transparent
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 25px
+        color: #4F4C4D
+        border-radius: 5px
+        margin-bottom: 30px
+        &:hover
+            border-color: $accent
+     
+.ball
+    margin-bottom: 40px
+    &__icon
+        height: 61px
+        svg
+            max-height: 61px
+    &__title
+        font-size: 20px
+        font-weight: bold
+        margin-top: 20px
+        margin-bottom: 20px
+    &__text
+        font-size: 16px
+
+.list
+    li
+        position: relative
+        padding-left: 20px
+        font-size: 20px
+        &:before
+            content: ''
+            display: block
+            width: 8px
+            height: 8px
+            background-color: $textcolor
+            position: absolute
+            top: 12px
+            left: 0
+            border-radius: 50%
+
+
+
++media-breakpoint-down(xl)
+
+    
++media-breakpoint-down(lg)
+   
+
++media-breakpoint-down(md)
+
+ 
++media-breakpoint-down(sm)
+    

@@ -139,11 +139,37 @@ p
             border-radius: 50%
 
 
+@media only screen and (max-width: 1600px)
+    .heading
+        &_lg
+            font-size: 40px
 
 +media-breakpoint-down(xl)
+    .heading
+        &_md
+            font-size: 32px
+        &_sm
+            font-size: 24px
 
+    .list
+        li
+            font-size: 18px
+            &:before
+                top: 10px
+
+        
+    .btn
+        padding: 12px 20px
+        font-size: 16px
+        &_sm
+            padding: 8px 37px
+    
+    .ball
+        &__title
+            font-size: 16px
     
 +media-breakpoint-down(lg)
+    
    
 
 +media-breakpoint-down(md)

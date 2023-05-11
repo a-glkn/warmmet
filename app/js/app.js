@@ -28,10 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    // var toggler = document.querySelector(".menu-toggler");
-	// toggler.addEventListener("click",function(e){
-	// 	document.body.classList.toggle('menu-openned');
-	// }, false);
+    var togglers = document.querySelectorAll(".menu-toggler");
+	togglers.forEach((t) => {
+        t.addEventListener("click",function(e){
+            document.body.classList.toggle('menu-openned');
+        }, false);
+    });
+    
+   
 
     /* Tabs */
     let tabs = document.querySelectorAll('.tabs');
@@ -52,5 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
+    window.addEventListener('scroll', function() {
+        if(window.scrollY) {
+            document.body.classList.add('header-fixed');
+        } else {
+            document.body.classList.remove('header-fixed');
+        }
+    });
 });

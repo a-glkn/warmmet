@@ -248,6 +248,20 @@
 .section-social
     padding-top: 100px
     padding-bottom: 60px
+    position: relative
+    .col-content, .heading
+        position: relative
+        z-index: 2
+    &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        background-color: #F7F7F7
+        z-index: 1
+        width: calc(50% - 88px)
+        height: 100%
     img
         max-width: 100%
         height: auto
@@ -315,6 +329,60 @@
         margin-bottom: 40px
 
 
+.showroom
+    img
+        max-width: 100%
+        height: auto
+
+    .heading_sm
+        margin-top: 10px
+        margin-bottom: 10px
+.section-showroom
+    padding-top: 80px
+    padding-bottom: 80px
+    .heading_md
+        margin-bottom: 20px
+    .row-content
+        margin-top: 20px
+
+.soc-block
+    position: relative
+    z-index: 10
+
+.soc-slider
+    position: relative
+    &__item
+        img
+            max-width: 100%
+            height: auto
+
+    .swiper-button-prev, .swiper-button-next
+        width: 50px
+        height: 50px
+        position: absolute
+        left: 0
+        margin-top: -25px
+        top: 50% !important
+        bottom: 90px
+        top: auto
+        svg
+            path, rect
+                transition: .3s ease
+        &:after
+            display: none
+
+        &:hover
+            svg
+                path, rect
+                    stroke: $accent
+
+    .swiper-button-prev
+        transform: rotate(180deg)
+
+    .swiper-button-prev
+        margin-left: 20px
+    .swiper-button-next
+        margin-left: 575px
 
 @media only screen and (max-width: 1600px)
     .section-intro
@@ -378,7 +446,9 @@
                 margin-bottom: 10px
             &__content
                 font-size: 16px
-    
+    .soc-slider
+        .swiper-button-next
+            margin-left: 475px
 +media-breakpoint-down(lg)
     .section-intro
         .main-slider
@@ -395,6 +465,22 @@
         .col-map
             margin-top: 40px
     
+    .section-showroom
+        padding-top: 40px
+        padding-bottom: 20px
+
+    .section-social:after
+        display: none
+    .soc-slider
+        margin-top: 40px
+        .swiper-button-prev
+            margin-left: 0
+            left: 20px
+        .swiper-button-next
+            margin-left: 0
+            left: auto
+            right: 20px
+
 +media-breakpoint-down(md)
 
     .section-intro

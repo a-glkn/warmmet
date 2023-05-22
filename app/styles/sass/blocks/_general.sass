@@ -77,6 +77,7 @@ p
 .heading
     font-style: normal
     line-height: 130%
+    user-select: none
     &_lg
         font-size: 50px
         font-weight: 700
@@ -169,9 +170,15 @@ p
             font-size: 16px
     
 +media-breakpoint-down(lg)
-    
-   
+    .heading
+        &_md
+            font-size: 28px
+        &_sm
+            font-size: 20px
 
+   
+    .showroom
+        margin-bottom: 30px
 +media-breakpoint-down(md)
 
  

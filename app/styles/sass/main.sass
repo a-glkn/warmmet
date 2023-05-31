@@ -10,6 +10,9 @@
     display: flex
     width: 100%
     position: relative
+    .breadcrumbs
+        margin-bottom: 40px
+        margin-top: 60px
     .wrapper
         width: 100%
         position: relative
@@ -57,6 +60,9 @@
             margin-left: -560px
         .swiper-button-next
             margin-left: -160px
+        &_one
+            .swiper-button-prev, .swiper-button-next
+                display: none
 
         .swiper-pagination
             width: 449px
@@ -74,10 +80,8 @@
                 opacity: 1 !important
                 &-active
                     background-color: #fff !important
-
-
-                
-    
+    .heading-price
+        margin-bottom: 30px
     .features
         padding: 15px 20px
         background-color: rgba(255,255,255, .15)
@@ -104,6 +108,18 @@
                 color: #FFFFFF
                 margin-top: auto
                 margin-bottom: auto
+        &_wide
+            width: 100%
+            display: flex
+            max-width: 786px
+            flex-wrap: wrap
+            flex-direction: row
+            padding-bottom: 5px
+            .features
+                &__item
+                    height: 40px
+                    min-width: 50%
+                    max-width: 50%
 
 .section-catalog
     padding-top: 60px
@@ -140,6 +156,22 @@
             line-height: 25px
         .btn
             margin-top: 27px
+
+.section-blog
+    padding-top: 80px
+    padding-bottom: 80px
+
+.section-furnitura
+    padding-top: 60px
+    padding-bottom: 60px
+    .heading
+        margin-bottom: 40px
+
+.section-arch
+    padding-top: 60px
+    padding-bottom: 30px
+    .heading_md
+        margin-bottom: 40px
 
 .section-contacts
     padding-top: 80px
@@ -481,6 +513,15 @@
             left: auto
             right: 20px
 
+
+
+    .section-intro 
+        .features_wide
+            .features
+                &__item
+                    width: 100%
+                    min-width: 100%
+
 +media-breakpoint-down(md)
 
     .section-intro
@@ -521,7 +562,7 @@
             padding-bottom: 110px
             .btn
                 width: 100%
-
+   
 +media-breakpoint-down(sm)
     
 

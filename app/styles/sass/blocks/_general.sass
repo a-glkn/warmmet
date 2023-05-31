@@ -139,6 +139,133 @@ p
             left: 0
             border-radius: 50%
 
+.breadcrumbs
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 17px
+    color: #fff
+    a
+        color: #fff
+        text-decoration: none
+        transition: .3s ease
+        &:hover
+            color: $accent
+
+.menu-line
+    display: flex
+    flex-wrap: nowrap
+    overflow-x: auto
+    margin-bottom: 40px
+    -ms-overflow-style: none
+    scrollbar-width: none
+    &__item
+        padding-left: 15px
+        padding-right: 15px
+        text-decoration: none
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 130%
+        color: #4F4C4D
+        white-space: nowrap
+        position: relative
+        transition: .3s ease
+        &:after
+            content: ''
+            display: block
+            width: 1px
+            height: 32px
+            position: absolute
+            top: 50%
+            margin-top: -16px
+            right: 0
+            background-color: rgba(79, 76, 77, .5)
+        &:hover
+            color: $accent
+        &.active
+            color: $accent
+
+.menu-line::-webkit-scrollbar
+    display: none
+
+.typo
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 1.55
+    color: #4F4C4D
+    h3
+        font-style: normal
+        font-weight: 700
+        font-size: 30px
+        line-height: 1.8
+        margin-top: 1em
+        &:first-of-type
+            margin-top: 0
+    p
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.55
+        color: #4F4C4D
+        margin: 0.5em 0
+    ul, ol
+        list-style-position: inside
+
+    ul
+        list-style-type: disc
+
+
+.card
+    margin-bottom: 30px
+    &__img
+        img
+            max-width: 100%
+            height: auto
+    &__title
+        margin-top: 20px
+        font-style: normal
+        font-weight: 600
+        font-size: 24px
+        line-height: 130%
+        margin-bottom: 8px
+        color: #4F4C4D
+    &__content  
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 25px
+        color: #4F4C4D
+        overflow: hidden
+        text-overflow: ellipsis
+        display: -webkit-box
+        -webkit-line-clamp: 3
+        -webkit-box-orient: vertical
+
+    &__author
+        display: flex
+        margin-top: 20px
+        &-img
+            img
+                width: 56px
+                border-radius: 50%
+        &-content
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 160%
+            color: #919191
+            padding-left: 20px
+            div
+                font-style: normal
+                font-weight: 400
+                font-size: 16px
+                line-height: 160%
+                color: #4F4C4D
+                margin-bottom: 8px
+
+
 
 @media only screen and (max-width: 1600px)
     .heading
@@ -179,8 +306,20 @@ p
    
     .showroom
         margin-bottom: 30px
-+media-breakpoint-down(md)
 
+    .typo
+        h3
+            font-size: 28px
+    .breadcrumbs
+        display: none
+    
++media-breakpoint-down(md)
+    .typo
+        h3
+            font-size: 26px
  
 +media-breakpoint-down(sm)
+
+    .heading_lg
+        font-size: 32px
     

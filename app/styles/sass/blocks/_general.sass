@@ -28,7 +28,7 @@
     cursor: pointer
     &_w-100p
         width: 100%
-    &:hover
+    &:not([disabled]):hover
         opacity: 0.9
 
     &_light
@@ -46,21 +46,27 @@
         color: #4F4C4D
         border: 1px solid #4F4C4D
         background-color: #fff
-        &:hover
+        &:not([disabled]):hover
             opacity: 1
             color: $accent
             border-color: $accent
-
+        
     &_light-3
         color: $accent
         border: 1px solid $accent
         background-color: transparent
-        &:hover
+        &:not([disabled]):hover
             opacity: 1
             color: #fff
             border-color: #fff
             background-color: $accent
 
+
+.btn[disabled]
+    opacity: .7
+    cursor: default
+    &:hover
+        border-color: inherit
 
 a.btn
     text-decoration: none !important
@@ -267,6 +273,187 @@ p
 
 
 
+.gallery-slider, .thumb-slider
+    img
+        max-width: 100%
+        height: auto
+
+.gallery-slider
+    margin-bottom: 10px
+
+
+.thumb-slider
+    .swiper-slide
+        transition: .3s ease
+        cursor: pointer
+    .swiper-slide-thumb-active
+        border-radius: 5px
+        border: 2px solid #F14624
+
+
+.img-checkbox, .img-radio
+    height: 200px
+    width: 200px
+    background-color: #ffffff
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.2)
+    border-radius: 4px
+    position: relative
+    cursor: pointer
+
+
+.img-checkbox input[type="checkbox"], .img-radio input[type="radio"]
+    -webkit-appearance: none
+    position: relative
+    width: 100%
+    cursor: pointer
+
+.img-checkbox input[type="checkbox"]:after, .img-radio input[type="radio"]:after 
+    position: absolute
+    left: -7px
+    top: -27px
+    width: 30px
+    height: 30px
+    display: none
+    border-radius: 50%
+    background-color: #000
+    content: ''
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 50%
+    background-image: url(../images/dist/check.svg)
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,.4)
+
+.img-checkbox input[type="checkbox"]:checked:after, .img-radio input[type="radio"]:checked:after 
+    display: block
+
+.img-checkbox img, .img-radio img
+    position: absolute
+    margin: auto
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    width: 100%
+    height: auto
+    cursor: pointer
+
+.checks
+    display: flex
+    flex-wrap: wrap
+    .check
+        margin-bottom: 10px
+
+.check
+    &__name
+        margin-top: 5px
+        font-size: 15px
+
+
+.styled-radio
+    position: relative
+    margin-top: -1em
+    input[type="radio"]
+        -webkit-appearance: none
+        position: relative
+        width: 100%
+        cursor: pointer
+        &:before
+            width: 20px
+            height: 20px
+            border-radius: 50%
+            border: 2px solid #4F4C4D
+            content: ''
+            display: block
+            position: absolute
+            top: 12px
+            left: 0
+
+        &:after
+            width: 8px
+            height: 8px
+            border-radius: 50%
+            content: ''
+            display: block
+            position: absolute
+            top: 18px
+            left: 6px
+            background-color: #4F4C4D
+            opacity: 0
+      
+    label
+        padding-left: 30px
+        cursor: pointer
+        position: relative
+        z-index: 1
+
+.styled-radio input[type="radio"]:checked:after 
+    opacity: 1
+    
+.quiz
+    &__top
+        background-color: #fcf6f4
+        padding-top: 35px
+        padding-bottom: 40px
+        padding-left: 45px
+        padding-right: 45px
+        display: flex
+        justify-content: space-between
+        &-title
+            font-size: 14px
+            font-weight: bold
+            margin-top: auto
+            margin-bottom: auto
+            display: flex
+            padding-right: 20px
+            &:before
+                margin-right: 10px
+                margin-top: auto
+                margin-bottom: auto
+                content: ''
+                display: block
+                width: 23px
+                height: 20px
+                background-repeat: no-repeat
+                background-position: 0 0
+                background-image: url(../images/dist/doc.svg)
+        &-num
+            font-size: 14px
+            margin-top: auto
+            margin-bottom: auto
+    &__content
+        background-color: #fff
+        padding-left: 45px
+        padding-right: 45px
+        padding-top: 35px
+        padding-bottom: 55px
+        .heading_sm
+            margin-bottom: 20px
+        .check
+            margin-left: 5px
+            margin-right: 5px
+    &__progress
+        height: 5px
+        background-color: #cbcbcb
+        width: 100%
+        span
+            transition: .3s ease
+            background-color: $accent
+            display: block
+            height: 5px
+
+    .form__input
+        border-color: #cccccc
+.quiz-btns
+    margin-top: 80px
+    display: flex
+    justify-content: space-between
+    .btn
+        width: 120px
+
+.quiz-content-5
+    .row
+        margin-top: 40px
+
 @media only screen and (max-width: 1600px)
     .heading
         &_lg
@@ -317,7 +504,15 @@ p
     .typo
         h3
             font-size: 26px
- 
+    .img-checkbox, .img-radio
+        width: 160px
+        height: 160px
+
+    .quiz__content
+        padding-left: 20px
+        padding-right: 20px
+    .quiz__top
+        padding: 20px
 +media-breakpoint-down(sm)
 
     .heading_lg

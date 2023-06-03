@@ -416,6 +416,174 @@
     .swiper-button-next
         margin-left: 575px
 
+.main
+    padding-top: 156.8px
+    .breadcrumbs
+        padding-top: 60px
+        padding-bottom: 30px
+        color: #919191
+        a
+            color: #4F4C4D
+            &:hover
+                color: $accent
+    .tabs
+        .tabs-content__item
+            display: none
+            &.active
+                display: block
+
+    .tab-head
+        margin-top: 40px
+        margin-bottom: 30px
+        display: flex
+        &__item
+            cursor: pointer
+            width: 50%
+            padding: 15px 0
+            text-align: center
+            font-style: normal
+            font-weight: 700
+            font-size: 18px
+            line-height: 160%
+            color: rgba(241, 70, 36, .5)
+            height: 60px
+            transition: .3s ease
+            border-bottom: 1px solid transparent
+            &:hover
+                color: rgba(241, 70, 36, 1)
+            &.active
+                color: rgba(241, 70, 36, 1)
+                border-bottom: 1px solid #F14624
+
+    img
+        max-width: 100%
+        height: auto
+.product-title
+    font-style: normal
+    font-weight: 700
+    font-size: 25px
+    line-height: 160%
+    color: #4F4C4D
+    margin-bottom: 16px
+    div
+        font-size: 30px
+
+.product-desc
+    margin-bottom: 16px
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 25px
+    color: #4F4C4D
+    padding-top: 16px
+    padding-bottom: 16px
+    border-top: 1px solid #D5D1D3
+    border-bottom: 1px solid #D5D1D3
+    p
+        margin: 0.5em 0
+        b
+            font-weight: bold
+
+    ul
+        list-style-position: inside
+        list-style-type: disc
+
+.product-content
+    .heading_lg
+        margin-top: 1em
+        margin-bottom: 1em
+
+    .carts
+        display: flex
+        justify-content: space-between
+        img
+            cursor: zoom-in
+            max-width: calc(33.333% - 13.3333px)
+            height: auto
+
+.product-colors
+    display: flex
+    margin-bottom: 16px
+    padding-bottom: 16px
+    border-bottom: 1px solid #D5D1D3
+    margin-left: -9px
+    margin-right: -9px
+
+    &__item
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 25px
+        color: #4F4C4D
+        margin-left: 9px
+        margin-right: 9px
+        max-width: calc(20% - 13.333px)
+        img
+            margin-bottom: 10px
+
+
+
+.product-paint
+    display: flex
+    padding-bottom: 16px
+    border-bottom: 1px solid #D5D1D3
+    svg
+        width: 38px
+        height: 20px
+        margin-top: auto
+        margin-bottom: auto
+        margin-right: 10px
+    span
+        font-style: normal
+        font-weight: 700
+        font-size: 15px
+        line-height: 160%
+        color: #4F4C4D
+        margin-top: auto
+        margin-bottom: auto
+
+.product-price
+    margin-top: 16px
+    margin-bottom: 16px
+
+.product-colors-title
+    font-style: normal
+    font-weight: 700
+    font-size: 16px
+    line-height: 160%
+    color: #4F4C4D
+    margin-bottom: 10px
+
+.main
+    .btn_conulst
+        margin-top: 10px
+
+.section-delivery
+    padding-bottom: 80px
+    .heading_md
+        margin-bottom: 40px
+    .container
+        position: relative
+    img
+        max-width: 100%
+        height: auto
+    .car
+        width: 476px
+        position: absolute
+        left: -120px
+        top: 170px
+    .map
+        width: 860px
+        display: flex
+        margin-left: auto
+        
+
+.section-calc
+    padding-top: 80px
+    padding-bottom: 100px
+    .heading_md
+        margin-bottom: 40px
+
 @media only screen and (max-width: 1600px)
     .section-intro
         height: 100vh
@@ -481,6 +649,18 @@
     .soc-slider
         .swiper-button-next
             margin-left: 475px
+
+    .section-delivery 
+        .map
+            margin-right: auto
+            max-width: 100%
+            height: auto
+        .car
+            width: 200px
+            left: auto
+            right: 300px
+            top: auto
+            bottom: 100px
 +media-breakpoint-down(lg)
     .section-intro
         .main-slider
@@ -522,6 +702,17 @@
                     width: 100%
                     min-width: 100%
 
+    .main
+        padding-top: 93px
+
+    .product-title
+        margin-top: 40px
+
+    .section-delivery 
+        .car
+            width: 120px
+            right: 300px
+            bottom: 70px
 +media-breakpoint-down(md)
 
     .section-intro
@@ -562,7 +753,20 @@
             padding-bottom: 110px
             .btn
                 width: 100%
-   
-+media-breakpoint-down(sm)
-    
+    .section-delivery 
+        .car
+            width: 120px
+            right: 200px
+            bottom: 70px
 
+    .main .tab-head__item
+        font-size: 14px
+        white-space: nowrap
++media-breakpoint-down(sm)
+    .section-delivery 
+        .car
+            width: 80px
+            right: 100px
+            bottom: 40px
+    .main .tab-head__item
+        font-size: 13px

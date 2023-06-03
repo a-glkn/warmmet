@@ -77,11 +77,119 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    if( document.body.classList.contains( 'header-fixed-straight' ) ) {
+        document.body.classList.add('header-fixed');
+    }
+
     window.addEventListener('scroll', function() {
-        if(window.scrollY) {
-            document.body.classList.add('header-fixed');
+        if( document.body.classList.contains( 'header-fixed-straight' ) ) {
+            //
         } else {
-            document.body.classList.remove('header-fixed');
+            if(window.scrollY) {
+                document.body.classList.add('header-fixed');
+            } else {
+                document.body.classList.remove('header-fixed');
+            }
         }
+
     });
+
+    let gallerySlider = document.querySelectorAll('.gallery-slider');
+
+    if(gallerySlider) {
+        var swiper = new Swiper(".thumb-slider", {
+            spaceBetween: 10,
+            slidesPerView: 7,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        var swiper2 = new Swiper(".gallery-slider", {
+            spaceBetween: 10,
+            thumbs: {
+              swiper: swiper,
+            },
+        });
+    }
+
+
+    /* Quiz */
+    const formQuiz = document.querySelector(".form_quiz");
+
+    if(formQuiz) {
+        const formQuizBtnPrev = formQuiz.querySelector(".btn-prev");
+
+        formQuiz.addEventListener("submit", function(e) {
+            var step = document.querySelector(".quiz").getAttribute('data-step');
+            var cont = document.querySelector('.quiz-content-' + step);
+    
+            var allowedNext = false;
+    
+            if(step < 5) {
+                cont.querySelectorAll('input').forEach((t) => {
+                
+                    if(t.checked) {
+                        allowedNext = true;
+                    }
+                });
+    
+                e.preventDefault();
+    
+            } else {
+                cont.querySelectorAll('input').forEach((t) => {
+                    if(t.value) {
+                        allowedNext = true;
+                    }
+                });
+            }
+    
+            if(allowedNext) {
+                if(step < 5) {
+                    cont.style.display = 'none';
+                    step++;
+    
+                    document.querySelector(".quiz").setAttribute('data-step', step);
+                    document.querySelector('.quiz-content-' + step).style.display = 'block';
+    
+    
+                    document.querySelector('.quiz__progress span').style.width = ((step-1) / 4 * 100) + '%';
+    
+    
+                    document.querySelector('.quiz .btn-prev').removeAttribute("disabled");
+    
+                    if(step <= 4) {
+                        document.querySelector('.quiz__top-num span').innerHTML = step;
+                    }
+                } 
+            } else {
+                e.preventDefault();
+            }
+    
+        }, false);
+
+        formQuizBtnPrev.addEventListener("click", function(e) {
+
+            var step = document.querySelector(".quiz").getAttribute('data-step');
+            var cont = document.querySelector('.quiz-content-' + step);
+
+            cont.style.display = 'none';
+            step--;
+
+            document.querySelector(".quiz").setAttribute('data-step', step);
+            document.querySelector('.quiz-content-' + step).style.display = 'block';
+            document.querySelector('.quiz__progress span').style.width = ((step-1) / 4 * 100) + '%';
+
+            if(step == 1) {
+                document.querySelector('.quiz .btn-prev').setAttribute("disabled", 'disabled');
+            }
+
+            if(step <= 4) {
+                document.querySelector('.quiz__top-num span').innerHTML = step;
+            }
+
+        }, false);
+    }
+
+  
+    
 });

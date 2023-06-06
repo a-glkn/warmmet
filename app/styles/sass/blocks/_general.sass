@@ -177,6 +177,7 @@ p
         white-space: nowrap
         position: relative
         transition: .3s ease
+        cursor: pointer
         &:after
             content: ''
             display: block
@@ -187,6 +188,10 @@ p
             margin-top: -16px
             right: 0
             background-color: rgba(79, 76, 77, .5)
+
+        &:last-child
+            &:after
+                display: none
         &:hover
             color: $accent
         &.active
@@ -453,6 +458,12 @@ p
 .quiz-content-5
     .row
         margin-top: 40px
+
+.tabs-content
+    &__item
+        display: none
+        &.active
+            display: block
 
 @media only screen and (max-width: 1600px)
     .heading

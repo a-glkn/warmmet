@@ -81,6 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('header-fixed');
     }
 
+
+    if(window.scrollY) {
+        document.body.classList.add('header-fixed');
+    }
+
     window.addEventListener('scroll', function() {
         if( document.body.classList.contains( 'header-fixed-straight' ) ) {
             //

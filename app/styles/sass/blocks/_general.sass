@@ -465,6 +465,10 @@ p
         &.active
             display: block
 
+.sticky-sidebar
+    position: fixed
+    top: 140px
+
 @media only screen and (max-width: 1600px)
     .heading
         &_lg
@@ -509,6 +513,19 @@ p
         h3
             font-size: 28px
     .breadcrumbs
+        display: none
+
+    .row-scroll
+        display: flex
+        flex-wrap: nowrap
+        overflow-x: auto
+        margin-bottom: 40px
+        -ms-overflow-style: none
+        scrollbar-width: none
+        .col-item
+            width: 280px
+        
+    .row-scroll::-webkit-scrollbar
         display: none
     
 +media-breakpoint-down(md)

@@ -191,5 +191,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
   
+    var liWithSub = document.querySelectorAll(".menu-wrapper li.has-sub");
+	liWithSub.forEach((t) => {
+        t.querySelector("a").addEventListener("click", function(e) {
+            e.preventDefault();
+            t.classList.toggle('active');
+        }, false);
+    });
     
 });

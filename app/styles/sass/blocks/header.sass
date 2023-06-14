@@ -160,7 +160,7 @@
                             position: absolute
                             top: 50%
                             right: 0
-                            margin-top: -9px
+                            margin-top: -11px
                             content: ''
                             width: 18px
                             height: 18px
@@ -193,8 +193,11 @@
                         ul
                             background-color: #F14624
                             padding: 20px
+                            width: 100%
                             li
+                                width: 100%
                                 margin-bottom: 20px
+                                white-space: nowrap
                                 &:last-child
                                     margin-bottom: 0
                         a
@@ -207,6 +210,14 @@
                     &:hover
                         .sub
                             display: block
+                    &.has-sub_left
+                        .sub
+                            min-width: 325px
+                            left: -20px
+                            top: 47px
+                            &:before
+                                top: 6px
+                                left: 20px
 
 
 .menu-toggler

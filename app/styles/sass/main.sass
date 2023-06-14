@@ -111,7 +111,7 @@
         &_wide
             width: 100%
             display: flex
-            max-width: 786px
+            max-width: 820px
             flex-wrap: wrap
             flex-direction: row
             padding-bottom: 5px
@@ -310,6 +310,10 @@
     padding: 24px
     border-radius: 5px
     background-color: #F7F7F7
+    &_mob
+        display: none
+    &_desktop
+        display: block
 
 .cat
     display: block
@@ -717,6 +721,13 @@
             width: 120px
             right: 300px
             bottom: 70px
+
+    .sticky-sidebar
+        background-color: #fff
+        &_mob
+            display: block
+        &_desktop
+            display: none
 +media-breakpoint-down(md)
 
     .section-intro

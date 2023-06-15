@@ -48,6 +48,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    let certSlider = document.querySelectorAll('.cert-slider');
+
+    if(certSlider) {
+        new Swiper(".cert-slider", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".cert-slider .swiper-button-next",
+                prevEl: ".cert-slider .swiper-button-prev",
+            },
+            breakpoints: {
+                480: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 2
+                },
+                992: {
+                    slidesPerView: 3
+                },
+            },
+        });
+    }
+
+
+    
   
     var togglers = document.querySelectorAll(".menu-toggler");
 	togglers.forEach((t) => {

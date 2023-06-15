@@ -157,6 +157,13 @@
         .btn
             margin-top: 27px
 
+    &_inside
+        padding-top: 0
+        padding-bottom: 100px
+        .about
+            padding-bottom: 0
+            border: 0
+
 .section-blog
     padding-top: 80px
     padding-bottom: 80px
@@ -173,6 +180,42 @@
     .heading_md
         margin-bottom: 40px
 
+.contact
+    position: relative
+    padding-left: 40px
+    margin-top: 30px
+    &__icon
+        position: absolute
+        top: 0
+        left: 0
+        width: 30px
+        height: 30px
+    &__title
+        font-style: normal
+        font-weight: 600
+        font-size: 20px
+        line-height: 130%
+        color: #4F4C4D
+        margin-bottom: 20px
+        a   
+            color: #4F4C4D
+            text-decoration: none
+            transition: .3s ease
+            &:hover
+                color: $accent
+
+    &__content
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 130%
+        color: #4F4C4D
+        a   
+            color: #4F4C4D
+            text-decoration: none
+            transition: .3s ease
+            &:hover
+                color: $accent
 .section-contacts
     padding-top: 80px
     padding-bottom: 80px
@@ -212,47 +255,10 @@
         margin-top: 10px
         li
             margin-right: 20px
-    .contact
-        position: relative
-        padding-left: 40px
-        margin-top: 30px
-        &__icon
-            position: absolute
-            top: 0
-            left: 0
-            width: 30px
-            height: 30px
-
-        &__title
-            font-style: normal
-            font-weight: 600
-            font-size: 20px
-            line-height: 130%
-            color: #4F4C4D
-            margin-bottom: 20px
-            a   
-                color: #4F4C4D
-                text-decoration: none
-                transition: .3s ease
-                &:hover
-                    color: $accent
 
 
-
-        &__content
-            font-style: normal
-            font-weight: 400
-            font-size: 18px
-            line-height: 130%
-            color: #4F4C4D
-            a   
-                color: #4F4C4D
-                text-decoration: none
-                transition: .3s ease
-                &:hover
-                    color: $accent
-
-
+    &_inside
+        padding-top: 0
     
 .section-balls
     padding-top: 60px
@@ -368,6 +374,63 @@
     .heading
         margin-bottom: 40px
 
+.section-creds
+    padding-top: 80px
+    padding-bottom: 80px
+
+.cert-slider
+    position: relative
+    overflow: hidden
+    &__item
+        .frame
+            margin-left: auto
+            margin-right: auto
+            width: 255.5px
+            height: 315px
+            position: relative
+            left: -5px
+            background-repeat: no-repeat
+            background-position: 0 0
+            background-size: cover
+            background-image: url(../images/dist/frame.png)
+            padding-top: 52px
+            padding-left: 51px
+            cursor: pointer
+            img
+                width: 162px
+                height: auto
+
+    .swiper-button-prev, .swiper-button-next
+        width: 50px
+        height: 50px
+        position: absolute
+        z-index: 2
+        top: 50% !important
+        margin-top: -25px !important
+        background-color: transparent
+        svg
+            width: 50px
+            height: 50px
+            path, rect
+                transition: .3s ease
+        &:after
+            display: none
+
+        &:hover
+            svg
+                path
+                    stroke: $accent
+
+    .swiper-button-prev
+        transform: rotate(180deg)
+        left: 0
+    .swiper-button-next
+        left: auto
+        right: 0
+.section-certs
+    padding: 80px 0
+    .heading_md
+        margin-bottom: 50px
 
 .showroom
     img
@@ -646,14 +709,6 @@
         .cat__title
             font-size: 16px
 
-
-    .section-contacts 
-        .contact
-            &__title
-                font-size: 18px
-                margin-bottom: 10px
-            &__content
-                font-size: 16px
     .soc-slider
         .swiper-button-next
             margin-left: 475px
@@ -669,6 +724,14 @@
             right: 300px
             top: auto
             bottom: 100px
+
+    .contact
+        &__title
+            font-size: 18px
+            margin-bottom: 10px
+        &__content
+            font-size: 16px
+
 +media-breakpoint-down(lg)
     .section-intro
         .main-slider
@@ -728,6 +791,11 @@
             display: block
         &_desktop
             display: none
+
+    .section-about
+        &_inside
+            .video
+                margin-bottom: 30px
 +media-breakpoint-down(md)
 
     .section-intro

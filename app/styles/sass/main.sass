@@ -121,6 +121,19 @@
                     min-width: 50%
                     max-width: 50%
 
+.section-intro
+    &_short
+        margin-top: 145px
+        height: 683px
+        min-height: auto
+        background-repeat: no-repeat
+        background-position: 0 0
+        background-size: cover
+
+    .breadcrumbs
+        margin-top: 0
+        
+
 .section-catalog
     padding-top: 60px
     padding-bottom: 60px
@@ -277,6 +290,23 @@
         margin-bottom: 20px
     .form
         margin-top: 30px
+
+    .contact
+        &__title
+            color: #fff
+            a   
+                color: #fff
+        &__content
+            color: #fff
+            a
+                color: #fff
+
+    .soc
+        margin-left: 40px
+        margin-top: 20px
+        display: flex
+        li
+            margin-right: 20px
 
 .section-hits
     padding-top: 60px
@@ -660,6 +690,40 @@
     .heading_md
         margin-bottom: 40px
 
+.reason
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 25px
+    color: #4F4C4D
+    &__title
+        font-style: normal
+        font-weight: 600
+        font-size: 18px
+        line-height: 25px
+        margin-bottom: 20px
+
+
+
+.section-reasons
+    padding: 80px 0
+    img
+        max-width: 100%
+        height: auto
+    .heading_md
+        margin-bottom: 50px
+    .reason
+        margin-bottom: 30px
+
+.section-videos
+    padding: 80px 0
+    .row-top
+        margin-bottom: 50px
+    .video
+        margin-bottom: 20px
+    p
+        font-size: 20px
+
 @media only screen and (max-width: 1600px)
     .section-intro
         height: 100vh
@@ -687,6 +751,12 @@
             &-text
                 font-size: 18px
 
+    .section-intro
+        &_short
+            min-height: auto
+            height: 683px
+            .wrapper
+                padding-top: 0
 
 +media-breakpoint-down(xl)
     .section-intro
@@ -801,6 +871,18 @@
         &_inside
             .video
                 margin-bottom: 30px
+
+    .section-reasons
+        img
+            display: inline-block
+            margin-bottom: 40px
+
+    .section-intro
+        &_short
+            margin-top: 73px
+            .wrapper
+                padding-top: 80px !important
+                padding-bottom: 80px !important
 +media-breakpoint-down(md)
 
     .section-intro
@@ -841,6 +923,12 @@
             padding-bottom: 110px
             .btn
                 width: 100%
+
+    .section-intro
+        &_short
+            min-height: auto
+            height: auto
+
     .section-delivery 
         .car
             width: 120px
@@ -850,6 +938,16 @@
     .main .tab-head__item
         font-size: 14px
         white-space: nowrap
+
+    .section-videos
+        padding-top: 0
+        padding-bottom: 40px
+        .btn
+            margin-top: 30px
+        .col-video
+            margin-bottom: 40px
+        p
+            font-size: 18px
 +media-breakpoint-down(sm)
     .section-delivery 
         .car

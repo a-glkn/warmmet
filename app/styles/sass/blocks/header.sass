@@ -1,5 +1,5 @@
 .header
-    position: fixed
+    position: absolute
     top: 0
     left: 0
     width: 100%
@@ -11,14 +11,13 @@
         justify-content: space-between
         height: 98px
         position: relative
-        border-bottom: 1px solid #fff
     .logo-container
         display: flex
         position: relative
         margin: auto 0
         .logo
-            width: 153px
-            height: 44px
+            width: 227px
+            height: 64px
             margin-right: 31px
             position: relative
             &:after
@@ -26,8 +25,9 @@
                 display: block
                 position: absolute
                 right: -16px
-                top: 1px
-                height: 42px
+                top: 50%
+                height: 40px
+                margin-top: -20px
                 width: 1px
                 background-color: #fff
             svg
@@ -41,9 +41,11 @@
             font-size: 14px
             line-height: 18px
             color: #FFFFFF
+            margin-top: auto
+            margin-bottom: auto
             div
                 font-style: normal
-                font-weight: 400
+                font-weight: 600
                 font-size: 16px
                 line-height: 25px
                 letter-spacing: 12.5px
@@ -57,64 +59,36 @@
         line-height: 26px
         color: #FFFFFF
         margin: auto 0
+        white-space: nowrap
+
 
     .contacts
-        margin: auto 0
-        text-align: right
-        width: 151px
-        a
-            font-style: normal
-            font-weight: 400
-            font-size: 13px
-            line-height: 22px
-            color: #FFFFFF
-            text-decoration: none
-            transition: .3s ease
-            &:hover
-                color: $accent
-    .order
-        font-family: 'Montserrat'
-        font-style: normal
-        font-weight: 400
-        font-size: 13px
-        line-height: 22px
-        color: #FFFFFF
-        text-decoration: none
-        transition: .3s ease
-        &:hover
-            color: $accent
-    
-    .phone
         display: flex
         margin: auto 0
-        &__content
-            width: 184px
-            text-align: right
-            .phone-num
-                font-style: normal
-                font-weight: 400
-                font-size: 20px
-                line-height: 31px
-                color: #FFFFFF
-                text-decoration: none
-                transition: .3s ease
-                &:hover
-                    color: $accent
+        .contact-item_mail
+            margin-right: 20px
 
-        .phone__icon
-            width: 24px
-            height: 24px
-            margin: auto 0
-            margin-left: 20px
-            cursor: pointer
+    .contact-item
+        &__icon
             svg
                 path
-                    transition: .3s ease
-            &:hover
-                svg
-                    path
-                        stroke: $accent
+                    stroke: #fff
+        &__content
+            color: #fff
+            a
+                color: #fff
 
+        &:hover
+            .contact-item
+                &__icon
+                    svg
+                        path
+                            stroke: #F14624
+                &__content
+                    color: #F14624
+                    a
+                        color: #F14624
+    
     .menu-toggler
         display: none
         top: 24.5px
@@ -149,6 +123,7 @@
                     padding-bottom: 15px
                     &:hover
                         color: $accent
+                        text-decoration: underline
 
                 &.has-sub
                     position: relative
@@ -234,7 +209,61 @@
             stroke: #fff
 
 .header-fixed
-    z-index: 100
+    .header
+        z-index: 100
+        position: fixed
+        transform: translateY(-98px)
+        &-wrap
+            border-color: transparent
+        &-top
+            background-color: #fff
+
+
+        .logo-container
+            .logo
+                &:after
+                    background-color: #4F4C4D
+                svg
+                    .red
+                        fill: #E94E1B
+                    .grey
+                        fill: #575756
+
+            .logo-text
+                color: #F14624
+                div
+                    color: #4F4C4D
+        .logo-desc
+            color: #000
+
+        .contacts
+            a
+                color: #4F4C4D
+
+    .menu
+        ul
+            li
+                a
+                    color: #fff !important
+
+    .header-menu
+        background-color: #F14624
+
+
+    .menu-toggler
+        svg
+            path
+                stroke: #F14624
+
+    .contact-item
+        &__icon
+            svg
+                path
+                    stroke: #F14624
+        &__content
+            color: #4F4C4D
+
+.header-colored
     .header
         &-wrap
             border-color: transparent
@@ -262,18 +291,7 @@
         .contacts
             a
                 color: #4F4C4D
-        a.order
-            color: #F14624
 
-        .phone__content 
-            .phone-num
-                color: #4F4C4D
-        .phone
-            .phone__icon
-                svg
-                    path
-                        fill: #fff
-                        stroke: #F14624
     .menu
         ul
             li
@@ -288,6 +306,14 @@
         svg
             path
                 stroke: #F14624
+
+    .contact-item
+        &__icon
+            svg
+                path
+                    stroke: #F14624
+        &__content
+            color: #4F4C4D
 
 .menu-openned
     width: 100%
@@ -418,11 +444,19 @@
 +media-breakpoint-down(xl)
     .header 
         .logo-desc
-            font-size: 14px
+            display: none
 
 
 +media-breakpoint-down(lg)
     .header
+        position: fixed
+        top: 0
+        left: 0
+        transform: translateY(0) !important
+        &-wrap
+            border-color: transparent
+        &-top
+            background-color: #fff
         &-wrap
             height: 73px
         .header-wrap
@@ -435,14 +469,35 @@
 
         .logo-container
             .logo
-                width: 112px
+                &:after
+                    background-color: #4F4C4D
+                svg
+                    .red
+                        fill: #E94E1B
+                    .grey
+                        fill: #575756
+
+            .logo-text
+                color: #F14624
+                div
+                    color: #4F4C4D
+        .logo-desc
+            color: #000
+
+        .contacts
+            a
+                color: #4F4C4D
+                
+        .logo-container
+            .logo
+                width: 113.5px
                 height: 32px
                 margin-right: 23px
                 &:after
                     height: 30px
-                    right: -11px
+                    margin-top: -15px
                 svg
-                    width: 112px
+                    width: 113.5px
                     height: 32px
 
 
@@ -456,6 +511,11 @@
 
         .menu-toggler
             display: block
+
+        .menu-toggler
+            svg
+                path
+                    stroke: $accent
         
 
 

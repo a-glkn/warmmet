@@ -45,7 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
             navigation: {
                 nextEl: ".soc-slider .swiper-button-next",
                 prevEl: ".soc-slider .swiper-button-prev",
-            }
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2
+                },
+                992: {
+                    slidesPerView: 3
+                },
+            },
         });
     }
 
@@ -104,26 +112,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if( document.body.classList.contains( 'header-fixed-straight' ) ) {
-        document.body.classList.add('header-fixed');
-    }
 
-
-    if(window.scrollY) {
+    if(window.scrollY > 98) {
         document.body.classList.add('header-fixed');
     }
 
     window.addEventListener('scroll', function() {
-        if( document.body.classList.contains( 'header-fixed-straight' ) ) {
-            //
+        if(window.scrollY > 98) {
+            document.body.classList.add('header-fixed');
         } else {
-            if(window.scrollY) {
-                document.body.classList.add('header-fixed');
-            } else {
-                document.body.classList.remove('header-fixed');
-            }
+            document.body.classList.remove('header-fixed');
         }
-
     });
 
     let gallerySlider = document.querySelectorAll('.gallery-slider');

@@ -76,6 +76,67 @@
     &:hover
         border-color: inherit
 
+.btn-text
+    display: flex
+    background-color: transparent
+    border: 3px solid #F04623
+    padding-left: 40px
+    padding-right: 40px
+    &__icon
+        margin-top: auto
+        margin-bottom: auto
+        margin-right: 7px
+        img
+            margin-top: auto
+            margin-bottom: auto
+    &__text
+        margin-top: auto
+        margin-bottom: auto
+        font-style: normal
+        font-weight: 500
+        font-size: 17px
+        line-height: 1.53
+        color: #FFFFFF
+
+
+
+.btn_icon
+    display: flex
+    .btn__icon
+        margin-left: auto
+        margin-top: auto
+        margin-bottom: auto
+        width: 25px
+        height: 25px
+        margin-right: 10px
+        svg
+            display: flex
+            margin-top: auto
+            margin-bottom: auto
+            path
+                transition: .3 ease
+    .btn__text
+        margin-right: auto
+
+
+.btn_icon_insta
+    &:hover
+        .btn__icon
+            svg
+                path
+                    fill: #fff
+
+
+.btn_icon_vk
+    &:hover
+        .btn__icon
+            svg
+                path.stroke
+                    stroke: #fff
+                path.fill
+                    fill: #fff
+
+
 a.btn
     text-decoration: none !important
 
@@ -165,6 +226,56 @@ p
         transition: .3s ease
         &:hover
             color: $accent
+
+.contact-item
+    display: flex
+    *
+        transition: .3s ease
+    &__icon
+        width: 24px
+        height: 24px
+        margin-top: auto
+        margin-bottom: auto
+        display: flex
+        margin-right: 8px
+        svg
+            margin-top: auto
+            margin-bottom: auto
+    &__content
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+        text-align: right
+        color: #4F4C4D
+        margin-top: auto
+        margin-bottom: auto
+        a
+            text-decoration: none !important
+
+
+.capture-block
+    position: relative
+    &:before
+        content: ''
+        display: block
+        width: calc(100% + 120px)
+        border: 1px solid #F14624
+        height: calc(100% + 130px)
+        position: absolute
+        top: -50px
+        left: -40px
+
+    &:after
+        content: ''
+        display: block
+        width: calc(100% + 120px)
+        border: 1px solid #fff
+        height: calc(100% + 130px)
+        position: absolute
+        top: -80px
+        left: -95px
+
 
 .menu-line
     display: flex
@@ -805,6 +916,10 @@ img.featured
         &__title
             font-size: 16px
     
+    .btn-text
+        &__text
+            font-size: 16px
+
 +media-breakpoint-down(lg)
     .heading
         &_md
@@ -880,6 +995,18 @@ img.featured
         padding: 15px 30px
         &__text
             font-size: 18px
+
+    .capture-block
+        &:before
+            display: none
+        &:after
+            display: none
+
+    .btn-text
+        margin-top: 20px
+        min-height: 50px
+        padding-left: 20px
+        padding-right: 20px
 +media-breakpoint-down(sm)
     .heading_lg
         font-size: 32px

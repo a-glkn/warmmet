@@ -8,6 +8,50 @@ import Inputmask from "inputmask/dist/inputmask.es6.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    var colorsItems = document.querySelectorAll('.product-colors__item');
+    var colorsImagesItems = document.querySelectorAll('.color-images__item');
+
+    if(colorsItems && colorsImagesItems) {
+        colorsItems.forEach((t, index) => {
+            t.onclick = function(e) {
+                colorsItems.forEach((el) => {
+                    el.classList.remove('active');
+                });
+    
+                colorsImagesItems.forEach((el) => {
+                    el.classList.remove('active');
+                });
+
+                colorsItems[index].classList.add('active');
+                colorsImagesItems[ index >= colorsImagesItems.length ? index - colorsImagesItems.length : index ].classList.add('active');
+
+                document.querySelector('.gallery-slider').style.display = 'none';
+                document.querySelector('.color-images').style.display = 'block';
+
+
+                // var thumbs = document.querySelector('.thumb-slider .swiper-slide');
+
+                // if(thumbs && thumbs.length) {
+                //     thumbs.forEach((el) => {
+                //         el.classList.remove('swiper-slide-active');
+                //     });
+                // }
+            };
+        });
+
+
+        var thumbs = document.querySelector('.thumb-slider .swiper-slide');
+        if(thumbs && thumbs.length) {
+            thumbs.forEach((el) => {
+                el.onclick = function(e) {
+                    
+                };
+                
+                
+            });
+        }
+    }
+
     var selector = document.querySelectorAll(".form__input_tel");
 
     var im = new Inputmask("+7 (999) 999 99 99");
@@ -141,6 +185,26 @@ document.addEventListener('DOMContentLoaded', () => {
               swiper: swiper,
             },
         });
+
+
+        swiper.on('click', function () {
+
+            document.querySelector('.gallery-slider').style.display = 'block';
+            document.querySelector('.color-images').style.display = 'none';
+
+            if(colorsImagesItems) {
+                colorsImagesItems.forEach((el) => {
+                    el.classList.remove('active');
+                });
+            }
+
+            if(colorsItems) {
+                colorsItems.forEach((el) => {
+                    el.classList.remove('active');
+                });
+            }
+            
+        });
     }
 
 
@@ -240,5 +304,6 @@ document.addEventListener('DOMContentLoaded', () => {
             t.classList.toggle('active');
         }, false);
     });
+
     
 });

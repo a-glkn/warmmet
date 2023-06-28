@@ -187,19 +187,25 @@
             line-height: 74px
             text-transform: uppercase
             color: #F14624
-            margin-bottom: 19px
             span
                 color: #4F4C4D
 
         .heading
             margin-bottom: 13px
+
+        .heading_sm
+            margin-top: 1em
         p
             font-style: normal
             font-weight: 400
             font-size: 16px
             line-height: 25px
+            margin: 1em 0
         .btn
             margin-top: 27px
+
+        .video
+            margin: 2em 0
 
     &_inside
         padding-top: 0
@@ -784,8 +790,34 @@
         line-height: 25px
         margin-bottom: 20px
 
+.section-why
+    padding-top: 80px
+    padding-bottom: 80px
+    .heading
+        display: flex
+        margin-bottom: 50px
+        svg
+            margin-left: 20px
+        *
+            margin-top: auto
+            margin-bottom: auto
+    img
+        max-width: 100%
+        height: auto
+    .row-elements
+        margin-bottom: 20px
 
+    .quote-block
+        height: 294px
 
+    .row-elements_1
+        .text-block
+            margin-bottom: 20px
+
+    .row-elements_3
+        .text-block_1
+            margin-bottom: 20px
+        
 .section-reasons
     padding: 80px 0
     img
@@ -889,7 +921,21 @@
             margin-bottom: 10px
         &__content
             font-size: 16px
-   
+    .section-why
+        .heading
+            svg
+                width: 177px
+                height: 30px
+        .row-elements_1
+            .img_2
+                height: 100%
+                width: auto
+                object-fit: cover
+        .row-elements_2, .row-elements_3 ,.row-elements_4
+            .img
+                height: 100%
+                width: auto
+                object-fit: cover
 +media-breakpoint-down(lg)
     .section-intro
         .main-slider
@@ -940,6 +986,7 @@
 
     .section-about
         &_inside
+            padding-bottom: 60px
             .video
                 margin-bottom: 30px
 
@@ -971,7 +1018,34 @@
             justify-content: space-around
             &__item
                 margin-bottom: 20px
-                
+    .section-why
+        padding-top: 60px
+        padding-bottom: 40px
+        
+        .heading
+            margin-bottom: 30px
+            svg
+                width: 165px
+                height: 28px
+        .row-elements
+            margin-bottom: 0
+        .text-block, .quote-block, .img
+            margin-bottom: 20px
+        .row-elements_3
+            margin-top: 20px
+
+        .row-elements_3 .text-block_1
+            margin-top: 20px
+        .row-elements_1
+            .img_2
+                height: auto
+                width: 100%
+                object-fit: none
+        .row-elements_2, .row-elements_3 ,.row-elements_4
+            .img
+                height: 100%
+                width: auto
+                object-fit: none
 +media-breakpoint-down(md)
 
     .section-intro

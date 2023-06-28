@@ -100,6 +100,18 @@
 
 
 
+.overlay-dark
+    position: relative
+    &:after
+        content: ''
+        width: 100%
+        height: 100%
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        background-color: rgba(29, 23, 22, .6)
+
 .btn_icon
     display: flex
     .btn__icon
@@ -158,6 +170,9 @@ p
         font-weight: 700
     &_md
         font-size: 36px
+        font-weight: 700
+    &_xmd
+        font-size: 34px
         font-weight: 700
     &_sm
         font-style: normal
@@ -276,7 +291,9 @@ p
         top: -80px
         left: -95px
 
-
+    .form
+        position: relative
+        z-index: 2
 .menu-line
     display: flex
     flex-wrap: nowrap
@@ -896,6 +913,8 @@ img.featured
     .heading
         &_md
             font-size: 32px
+        &_xmd
+            font-size: 30px
         &_sm
             font-size: 24px
 
@@ -924,6 +943,8 @@ img.featured
     .heading
         &_md
             font-size: 28px
+        &_xmd
+            font-size: 26px
         &_sm
             font-size: 20px
 
@@ -1010,7 +1031,7 @@ img.featured
 +media-breakpoint-down(sm)
     .heading_lg
         font-size: 32px
-    
+
     .callblock 
         padding: 10px 20px
         &__text

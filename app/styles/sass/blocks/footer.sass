@@ -6,7 +6,8 @@
         width: 260px
         svg
             width: 260px
-
+    .footer-text-mob
+        display: none
     .foot-text
         font-size: 12px
         color: #fcf6f4
@@ -141,12 +142,18 @@
 
 +media-breakpoint-down(lg)
     .footer
+        .footer-text-mob
+            display: block
+        .footer-text-desktop
+            display: none
         .logo
             svg
                 width: 260px
 
         .menu
-            display: none
+            padding-left: 0
+            padding-right: 0
+            margin-bottom: 30px
 
         .foot-text, .policy
             margin-top: 20px
@@ -154,9 +161,16 @@
         .col-right
             margin-top: 30px
             text-align: left
-
+        .payments
+            margin-bottom: 40px
         .soc 
             justify-content: flex-start
             li
                 margin-left: 0
                 margin-right: 20px
+
+        .phone:before
+            left: 0
+
+        .soc
+            margin-top: 30px

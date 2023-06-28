@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(formQuiz) {
         const formQuizBtnPrev = formQuiz.querySelector(".btn-prev");
 
-        formQuiz.addEventListener("submit", function(e) {
+        function quizNext(e) {
             var step = document.querySelector(".quiz").getAttribute('data-step');
             var cont = document.querySelector('.quiz-content-' + step);
     
@@ -195,7 +195,18 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 e.preventDefault();
             }
-    
+        }
+
+        document.querySelectorAll('.quiz input[type=radio]').forEach((t) => {
+            t.addEventListener("change", function(e) {
+                quizNext(e);
+            }, false);
+        });
+
+        formQuiz.addEventListener("submit", function(e) {
+            
+            quizNext(e);
+
         }, false);
 
         formQuizBtnPrev.addEventListener("click", function(e) {

@@ -165,6 +165,14 @@
             margin-top: 0 !important
             
 
+.section-gallery
+    .cat
+        img
+            transition: .3s ease
+        &:hover
+            img
+                transform: scale(1.05)
+
 .section-catalog
     padding-top: 60px
     padding-bottom: 60px
@@ -671,7 +679,8 @@
         margin: 0.5em 0
         b
             font-weight: bold
-
+        &:last-child
+            margin-bottom: 0
     ul
         list-style-position: inside
         list-style-type: disc
@@ -701,7 +710,7 @@
         font-style: normal
         font-weight: 400
         font-size: 14px
-        line-height: 25px
+        line-height: 1.7
         color: #4F4C4D
         margin-left: 9px
         margin-right: 9px
@@ -763,6 +772,11 @@
     color: #4F4C4D
     margin-bottom: 10px
 
+.product-list
+    padding-top: 16px
+    padding-bottom: 16px
+    border-bottom: 1px solid #D5D1D3
+    
 .main
     .btn_conulst
         margin-top: 10px
@@ -1077,6 +1091,9 @@
     .section-more-colors
         padding-top: 60px
         padding-bottom: 60px  
+
+    .sticky-sidebar
+        padding: 0
 +media-breakpoint-down(md)
 
     .section-intro
@@ -1144,6 +1161,12 @@
             flex-direction: column
             .btn
                 border-radius: 5px
+
+    .product-colors__item
+        font-size: 12px
+        margin-left: 5px
+        margin-right: 5px
+
 +media-breakpoint-down(sm)
     .section-delivery 
         .car

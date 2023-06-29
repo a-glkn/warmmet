@@ -333,6 +333,32 @@ p
         color: #FFFFFF
 
 
+ul.check-list
+    li
+        list-style-type: none
+        font-style: normal
+        font-weight: 700
+        font-size: 15px
+        line-height: 160%
+        color: #4F4C4D
+        position: relative
+        padding-left: 26px
+        margin-bottom: 10px
+        &:last-child
+            margin-bottom: 0
+        &:before
+            background-repeat: no-repeat
+            background-position: 0 0
+            content: ''
+            display: block
+            position: absolute
+            width: 16px
+            height: 16px
+            top: 3px
+            left: 0
+            background-image: url(../images/dist/check-icon.svg)
+
+
 
 .text-block
     background-color: #F7F7F7

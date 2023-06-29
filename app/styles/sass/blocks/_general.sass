@@ -370,7 +370,8 @@ ul.check-list
     padding-left: 20px
     padding-right: 20px
     display: flex
-
+    text-decoration: none !important
+    transition: .3s ease
     &__inner
         margin-top: auto
         margin-bottom: auto
@@ -381,7 +382,23 @@ ul.check-list
         line-height: 130%
         color: #4F4C4D
         margin-bottom: 10px
-
+        transition: .3s ease
+    &__more
+        display: flex
+        justify-content: space-between
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 130%
+        color: #4F4C4D
+        margin-top: 30px
+        transition: .3s ease
+        &-text, &-icon
+            margin-top: auto
+            margin-bottom: auto
+        svg
+            path
+                transition: .3s ease
 
     &_size-1
         height: 201px
@@ -391,6 +408,21 @@ ul.check-list
 
     &_size-3
         height: 271px
+
+.text-block_link
+    &:hover
+        color: #fff
+        background-color: #F14624
+        .text-block
+            &__title
+                color: #fff
+
+            &__more
+                color: #fff
+                svg
+                    path
+                        fill: #fff
+
 .menu-line
     display: flex
     flex-wrap: nowrap

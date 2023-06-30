@@ -9,48 +9,8 @@ import Inputmask from "inputmask/dist/inputmask.es6.js";
 document.addEventListener('DOMContentLoaded', () => {
 
     var colorsItems = document.querySelectorAll('.product-colors__item');
-    var colorsImagesItems = document.querySelectorAll('.color-images__item');
 
-    if(colorsItems && colorsImagesItems) {
-        colorsItems.forEach((t, index) => {
-            t.onclick = function(e) {
-                colorsItems.forEach((el) => {
-                    el.classList.remove('active');
-                });
-    
-                colorsImagesItems.forEach((el) => {
-                    el.classList.remove('active');
-                });
-
-                colorsItems[index].classList.add('active');
-                colorsImagesItems[ index >= colorsImagesItems.length ? index - colorsImagesItems.length : index ].classList.add('active');
-
-                document.querySelector('.gallery-slider').style.display = 'none';
-                document.querySelector('.color-images').style.display = 'block';
-
-
-                // var thumbs = document.querySelector('.thumb-slider .swiper-slide');
-
-                // if(thumbs && thumbs.length) {
-                //     thumbs.forEach((el) => {
-                //         el.classList.remove('swiper-slide-active');
-                //     });
-                // }
-            };
-        });
-
-
-        // var thumbs = document.querySelector('.thumb-slider .swiper-slide');
-        // if(thumbs && thumbs.length) {
-        //     thumbs.forEach((el) => {
-        //         el.onclick = function(e) {
-                    
-        //         };
-                
-                
-        //     });
-        // }
-    }
+   
 
     var selector = document.querySelectorAll(".form__input_tel");
 
@@ -179,7 +139,18 @@ document.addEventListener('DOMContentLoaded', () => {
         //     watchSlidesProgress: true,
         // });
 
-        var swiper2 = new Swiper(".gallery-slider", {
+        var offsetBeforeColors = 0;
+        var gallerySlides = document.querySelectorAll('.gallery-slider .swiper-slide')
+        for(var i = 0; i < gallerySlides.length; i++) {
+            var el = gallerySlides[i];
+            
+            if( el.getAttribute('data-color-index') ) {
+                offsetBeforeColors = i;
+                break;
+            }
+        }
+
+        var swiperGallery = new Swiper(".gallery-slider", {
             spaceBetween: 10,
             // thumbs: {
             //   swiper: swiper,
@@ -188,27 +159,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextEl: ".gallery-slider .swiper-button-next",
                 prevEl: ".gallery-slider .swiper-button-prev",
             },
+            on: {
+                slideChange: function(swiper) {
+
+                    var activeSlide = gallerySlides[swiper.activeIndex]
+                    var colorIndex = activeSlide.getAttribute('data-color-index');
+
+                    colorsItems.forEach((el) => {
+                        el.classList.remove('active');
+                    });
+
+                    if(colorIndex && colorsItems) {
+                        colorsItems[colorIndex].classList.add('active');
+                    }
+                }
+            }
         });
 
 
-        swiper.on('click', function () {
+        if(colorsItems) {
+            colorsItems.forEach((t, index) => {
+                t.onclick = function(e) {
+                    colorsItems.forEach((el) => {
+                        el.classList.remove('active');
+                    });
+                    colorsItems[index].classList.add('active');
 
-            document.querySelector('.gallery-slider').style.display = 'block';
-            document.querySelector('.color-images').style.display = 'none';
-
-            if(colorsImagesItems) {
-                colorsImagesItems.forEach((el) => {
-                    el.classList.remove('active');
-                });
-            }
-
-            if(colorsItems) {
-                colorsItems.forEach((el) => {
-                    el.classList.remove('active');
-                });
-            }
-            
-        });
+                    swiperGallery.slideTo(offsetBeforeColors + index);
+                };
+            });
+        }
     }
 
 

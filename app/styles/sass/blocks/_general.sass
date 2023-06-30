@@ -29,16 +29,22 @@
     &_w-100p
         width: 100%
     &:not([disabled]):hover
-        opacity: 0.9
+        background-color: #FF7A00
+
+    &:not([disabled]):active
+        background-color: #FFA553
 
     &_light
         background-color: transparent
         border: 1px solid #FFFFFF
         &:hover
-            opacity: 1
-            color: $accent
-            border-color: $accent
-
+            color: #fff !important
+            border-color: #F14624 !important
+            background-color: #F14624 !important
+        &:active
+            color: #fff !important
+            border-color: #FB6A4D !important
+            background-color: #FB6A4D !important
     &_sm
         padding: 10px 37px
 
@@ -47,26 +53,34 @@
         border: 1px solid #4F4C4D
         background-color: #fff
         &:not([disabled]):hover
-            opacity: 1
-            color: $accent
-            border-color: $accent
+            color: #fff !important
+            border-color: #F14624 !important
+            background-color: #F14624 !important
+        &:not([disabled]):active
+            color: #fff !important
+            border-color: #FB6A4D !important
+            background-color: #FB6A4D !important
         
     &_light-3
         color: $accent
         border: 1px solid $accent
         background-color: transparent
         &:not([disabled]):hover
-            opacity: 1
-            color: #fff
-            border-color: #fff
-            background-color: $accent
+            color: #fff !important
+            border-color: #F14624 !important
+            background-color: #F14624 !important
+        &:not([disabled]):active
+            color: #fff !important
+            border-color: #FB6A4D !important
+            background-color: #FB6A4D !important
 
     &_light-4
-        background-color: transparent
-        border: 1px solid #FFFFFF
+        background-color: transparent !important
+        border: 1px solid #FFFFFF !important
         color: #fff !important
-        &:hover
-            opacity: 1
+        &:hover, &:active
+            background-color: transparent !important
+            border: 1px solid #FFFFFF !important
         
 
             
@@ -694,6 +708,8 @@ img.featured
                 color: #4F4C4D
                 margin-bottom: 8px
 
+.sidebar
+    user-select: none
 
 
 .gallery-slider, .thumb-slider
@@ -703,6 +719,34 @@ img.featured
 
 .gallery-slider
     margin-bottom: 10px
+
+    .swiper-button-prev, .swiper-button-next
+        width: 50px
+        height: 50px
+        position: absolute
+        left: 50%
+        margin-top: -25px
+        top: 50%
+        z-index: 2
+        svg
+            path, rect
+                transition: .3s ease
+        &:after
+            display: none
+
+        &:hover
+            svg
+                path, rect
+                    stroke: $accent
+
+    .swiper-button-prev
+        transform: rotate(180deg)
+
+    .swiper-button-prev
+        left: 10px
+    .swiper-button-next
+        left: auto
+        right: 10px
 
 
 .thumb-slider

@@ -385,7 +385,7 @@
     .soc-slider
         margin-top: 66px
         overflow: hidden
-.sticky-sidebar
+.sidebar
     padding: 24px
     border-radius: 5px
     background-color: #F7F7F7
@@ -657,12 +657,12 @@
 .product-title
     font-style: normal
     font-weight: 700
-    font-size: 25px
+    font-size: 30px
     line-height: 160%
     color: #4F4C4D
     margin-bottom: 16px
     div
-        font-size: 30px
+        font-size: 36px
 
 .product-desc
     margin-bottom: 16px
@@ -671,9 +671,8 @@
     font-size: 16px
     line-height: 1.5
     color: #4F4C4D
-    padding-top: 16px
+    padding-top: 0
     padding-bottom: 16px
-    border-top: 1px solid #D5D1D3
     border-bottom: 1px solid #D5D1D3
     p
         margin: 0.5em 0
@@ -687,8 +686,8 @@
         font-size: 15px
 
 .product-content
-    .heading_lg
-        margin-top: 1em
+    .heading
+        margin-top: 2em
         margin-bottom: 1em
 
     .carts
@@ -702,10 +701,10 @@
 .product-colors
     display: flex
     margin-bottom: 16px
-    padding-bottom: 16px
-    border-bottom: 1px solid #D5D1D3
+    padding-bottom: 0
     margin-left: -9px
     margin-right: -9px
+    user-select: none
     &__item
         font-style: normal
         font-weight: 400
@@ -771,6 +770,7 @@
     line-height: 160%
     color: #4F4C4D
     margin-bottom: 10px
+    margin-top: 16px
 
 .product-list
     padding-top: 16px
@@ -978,6 +978,10 @@
                 height: 100%
                 width: auto
                 object-fit: cover
+    .product-title
+        font-size: 24px
+        div
+            font-size: 28px
 +media-breakpoint-down(lg)
     .section-intro
         .main-slider
@@ -1010,8 +1014,8 @@
     .main
         padding-top: 93px
 
-    .main .sticky-sidebar
-        margin-top: 40px
+    .main .sidebar
+        margin-top: 30px
 
     .section-delivery 
         .car
@@ -1019,7 +1023,7 @@
             right: 300px
             bottom: 70px
 
-    .sticky-sidebar
+    .sidebar
         background-color: #fff
         &_mob
             display: block
@@ -1094,8 +1098,13 @@
         padding-top: 60px
         padding-bottom: 60px  
 
-    .sticky-sidebar
+    .sidebar
         padding: 0
+
+    .product-title
+        font-size: 25px
+        div
+            font-size: 30px
 +media-breakpoint-down(md)
 
     .section-intro

@@ -40,16 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
 
-        var thumbs = document.querySelector('.thumb-slider .swiper-slide');
-        if(thumbs && thumbs.length) {
-            thumbs.forEach((el) => {
-                el.onclick = function(e) {
+        // var thumbs = document.querySelector('.thumb-slider .swiper-slide');
+        // if(thumbs && thumbs.length) {
+        //     thumbs.forEach((el) => {
+        //         el.onclick = function(e) {
                     
-                };
+        //         };
                 
                 
-            });
-        }
+        //     });
+        // }
     }
 
     var selector = document.querySelectorAll(".form__input_tel");
@@ -172,17 +172,21 @@ document.addEventListener('DOMContentLoaded', () => {
     let gallerySlider = document.querySelectorAll('.gallery-slider');
 
     if(gallerySlider) {
-        var swiper = new Swiper(".thumb-slider", {
-            spaceBetween: 10,
-            slidesPerView: 7,
-            freeMode: true,
-            watchSlidesProgress: true,
-        });
+        // var swiper = new Swiper(".thumb-slider", {
+        //     spaceBetween: 10,
+        //     slidesPerView: 7,
+        //     freeMode: true,
+        //     watchSlidesProgress: true,
+        // });
 
         var swiper2 = new Swiper(".gallery-slider", {
             spaceBetween: 10,
-            thumbs: {
-              swiper: swiper,
+            // thumbs: {
+            //   swiper: swiper,
+            // },
+            navigation: {
+                nextEl: ".gallery-slider .swiper-button-next",
+                prevEl: ".gallery-slider .swiper-button-prev",
             },
         });
 

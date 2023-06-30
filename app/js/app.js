@@ -213,6 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(formQuiz) {
         const formQuizBtnPrev = formQuiz.querySelector(".btn-prev");
+        const formQuizBtnNext = formQuiz.querySelector(".btn-next");
 
         function quizNext(e) {
             var step = document.querySelector(".quiz").getAttribute('data-step');
@@ -255,10 +256,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     if(step <= 4) {
                         document.querySelector('.quiz__top-num span').innerHTML = step;
                     }
-                } 
+                } else {
+                    formQuiz.submit();
+                }
             } else {
                 e.preventDefault();
             }
+
         }
 
         document.querySelectorAll('.quiz input[type=radio]').forEach((t) => {
@@ -267,11 +271,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }, false);
         });
 
-        formQuiz.addEventListener("submit", function(e) {
-            
-            quizNext(e);
 
-        }, false);
+        // formQuiz.addEventListener("submit", function(e) {
+            
+        //     quizNext(e);
+
+        // }, false);
 
         formQuizBtnPrev.addEventListener("click", function(e) {
 
@@ -294,6 +299,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
         }, false);
+
+
+        formQuizBtnNext.addEventListener("click", function(e) {
+            quizNext(e);
+        });
     }
 
   

@@ -745,6 +745,7 @@ img.featured
     background-size: 50%
     background-image: url(../images/dist/check.svg)
     box-shadow: 0 1px 8px 0 rgba(0,0,0,.4)
+    z-index: 2
 
 .img-checkbox input[type="checkbox"]:checked:after, .img-radio input[type="radio"]:checked:after 
     display: block
@@ -1282,6 +1283,30 @@ img.featured
     .row-palette
         padding-top: 20px
 
+    .quiz__top-title:before
+        display: none
+
+    .img-checkbox, .img-radio
+        width: 94px
+        height: 94px
+        margin-left: 0
+        margin-right: 0
+    .check__name
+        font-size: 10px
+    .quiz__content
+        padding-top: 20px
+        padding-left: 15px
+        padding-right: 15px
+        padding-bottom: 40px
+        .check
+            margin-left: 4px
+            margin-right: 4px
+
+    .styled-radio label
+        font-size: 16px
+
+    .quiz__content .heading_sm
+        font-size: 18px
 +media-breakpoint-down(sm)
     .heading_lg
         font-size: 28px

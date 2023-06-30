@@ -1241,10 +1241,33 @@ img.featured
             font-size: 18px
 
     .capture-block
+        padding: 20px
+        .btn
+            width: 100%
         &:before
-            display: none
+            width: calc(100%)
+            border: 1px solid #F14624
+            height: calc(100% + 5px)
+            top: 8px
+            left: 8px
+
         &:after
-            display: none
+            width: calc(100%)
+            border: 1px solid #fff
+            height: calc(100% + 5px)
+            top: -11px
+            left: -8px
+
+        .heading, .text, .form
+            padding-left: 10px
+            padding-right: 10px
+
+        .form
+            padding-bottom: 8px
+            
+        .heading_md
+            margin-top: 10px
+            font-size: 26px
 
     .btn-text
         margin-top: 20px
@@ -1258,6 +1281,7 @@ img.featured
 
     .row-palette
         padding-top: 20px
+
 +media-breakpoint-down(sm)
     .heading_lg
         font-size: 28px

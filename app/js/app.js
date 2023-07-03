@@ -206,6 +206,8 @@ document.addEventListener('DOMContentLoaded', () => {
             var allowedNext = false;
     
             if(step < 5) {
+                cont.style.border = "none";
+
                 cont.querySelectorAll('input').forEach((t) => {
                 
                     if(t.checked) {
@@ -214,11 +216,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
     
                 e.preventDefault();
+
+                if(!allowedNext) {
+                    cont.style.border = "1px solid red";
+                }
     
             } else {
+
                 cont.querySelectorAll('input').forEach((t) => {
+                    t.style.borderColor = "#ccc";
+
                     if(t.value) {
                         allowedNext = true;
+                    } else {
+                        t.style.borderColor = "red";
                     }
                 });
             }
@@ -241,7 +252,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         document.querySelector('.quiz__top-num span').innerHTML = step;
                     }
                 } else {
-                    formQuiz.submit();
+                    // formQuiz.submit();
+                    var event = new CustomEvent('quiz_submit', {
+                        detail: {
+                            form: formQuiz
+                        }
+                    });
+                    document.dispatchEvent(event);
                 }
             } else {
                 e.preventDefault();
@@ -256,11 +273,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
 
-        // formQuiz.addEventListener("submit", function(e) {
-            
-        //     quizNext(e);
-
-        // }, false);
+        // document.addEventListener('quiz_submit', function(event) {
+        //     console.log('Сработало событие quiz_submit:', event.detail);
+        //     var formData = new FormData(event.detail.form);
+        //     // Отправляем данные формы на сервер
+        //     // Выводим попап или перенаправляем на thankyou
+        // });
 
         formQuizBtnPrev.addEventListener("click", function(e) {
 

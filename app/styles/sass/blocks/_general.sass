@@ -113,6 +113,41 @@
         color: #FFFFFF
 
 
+.more-link
+    display: flex
+    text-decoration: none
+    &__text
+        font-style: normal
+        font-weight: 600
+        font-size: 16px
+        line-height: 25px
+        color: #F14624
+        transition: .3s ease
+    &__text, &__icon
+        margin-top: auto
+        margin-bottom: auto
+    &__icon
+        width: 16px
+        height: 15px
+        margin-left: 20px
+        position: relative
+        svg
+            position: absolute
+            top: 0
+            left: 0
+            path
+                transition: .3s ease
+    &:hover
+        .more-link
+            &__text
+                color: #FF7A00
+            &__icon
+                svg
+                    path
+                        stroke: #FF7A00
+
+
+
 
 .overlay-dark
     position: relative

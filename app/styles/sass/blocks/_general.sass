@@ -1091,6 +1091,47 @@ img.featured
         line-height: 20px
         color: rgba(79, 76, 77, 0.5)
 
+.loc
+    position: relative
+    display: flex
+    background-color: #F7F7F7
+    transition: .3s ease
+    color: #4F4C4D
+    text-decoration: none
+    &__content
+        margin-top: auto
+        margin-bottom: auto
+        padding-left: 30px
+        padding-right: 20px
+        .heading
+            margin-bottom: 10px
+        *
+            transition: .3s ease
+    &__img
+        width: 250px
+        min-width: 250px
+        max-width: 250px
+    
+
+    ul
+        list-style-type: disc
+        list-style-position: inside
+    img
+        max-height: 100%
+        width: auto
+
+    .img-battery-red
+        position: absolute
+        top: 0
+        right: -20px
+        max-height: 100%
+        width: auto
+
+a.loc:hover
+    background-color: #F14624
+    *
+        color: #fff    
+
 
 .pagination
     display: flex
@@ -1186,7 +1227,16 @@ img.featured
     .btn-text
         &__text
             font-size: 16px
+    .loc
+        font-size: 16px
+   
+        &__img
+            width: 180px
+            min-width: 180px
+            max-width: 180px
 
+        .heading_sm
+            font-size: 20px
 +media-breakpoint-down(lg)
     .heading
         &_md
@@ -1250,6 +1300,10 @@ img.featured
             font-size: 20px
         img
             right: -70px
+
+    .loc
+        &__content
+            padding: 30px !important
 +media-breakpoint-down(md)
     .typo
         h1
@@ -1352,6 +1406,16 @@ img.featured
 
     .quiz__content .heading_sm
         font-size: 18px
+
+    .loc
+        flex-direction: column
+        &__img
+            width: 100%
+            min-width: 100%
+            max-width: 100%
+            img
+                width: 100%
+                height: auto
 +media-breakpoint-down(sm)
     .heading_lg
         font-size: 28px

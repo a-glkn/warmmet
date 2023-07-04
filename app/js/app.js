@@ -9,9 +9,6 @@ import Inputmask from "inputmask/dist/inputmask.es6.js";
 document.addEventListener('DOMContentLoaded', () => {
 
     var colorsItems = document.querySelectorAll('.product-colors__item');
-
-   
-
     var selector = document.querySelectorAll(".form__input_tel");
 
     var im = new Inputmask("+7 (999) 999 99 99");

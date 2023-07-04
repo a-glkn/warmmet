@@ -880,6 +880,57 @@
     .heading_md
         margin-bottom: 30px
 
+
+.section-showcase
+    .row-1
+        padding-top: 80px
+    .row-2
+        padding-bottom: 60px
+    .img
+        background-color: #F14624
+    .logo
+        margin-bottom: 50px
+        svg
+            max-width: 100%
+            height: auto
+    .col-block
+        .heading_sm
+            margin-bottom: 20px
+        .btn 
+            margin-top: 50px
+    img
+        max-width: 100%
+        height: auto
+
+    ul
+        li
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            line-height: 130%
+            color: #4F4C4D
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
+    .row-2
+        margin-top: 20px
+    .loc
+        margin-bottom: 20px
+        overflow: hidden
+        &_1
+            height: 100%
+
+        &_5
+            height: 100%
+            .loc__content
+                padding-top: 40px
+                max-width: 320px
+                margin-top: 0
+
+    .col-addr
+        .loc
+            &:last-child
+                margin-bottom: 0
 @media only screen and (max-width: 1600px)
     .section-intro
         height: 100vh
@@ -983,6 +1034,17 @@
         font-size: 24px
         div
             font-size: 28px
+
+    .section-showcase
+        .logo
+            margin-bottom: 30px
+
+        .col-block
+            .btn
+                margin-top: 30px
+        ul
+            li
+                font-size: 16px
 +media-breakpoint-down(lg)
     .section-intro
         .main-slider
@@ -1106,6 +1168,14 @@
         font-size: 25px
         div
             font-size: 30px
+
+    .section-showcase
+        .loc
+            margin-bottom: 20px !important
+        .row-2
+            padding-bottom: 20px
+        .col-block
+            padding-bottom: 20px
 +media-breakpoint-down(md)
 
     .section-intro
@@ -1234,3 +1304,9 @@
     .section-blog
         padding-top: 60px
         padding-bottom: 60px
+
+    .section-showcase
+        .loc_5
+            margin-bottom: 0 !important
+            .loc__content
+                padding-right: 80px !important

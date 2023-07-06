@@ -319,43 +319,32 @@
     width: 100%
     height: 100%
     overflow: hidden
-    &:after
-        content: ''
-        display: block
-        position: absolute
-        width: 100%
-        height: 100%
-        top: 0
-        left: 0
-        z-index: 101
-        background-color: rgba(29, 23, 22, .5)
+
 
 .menu-openned .menu-toggler
     background-image: url(../images/dist/menu-close.svg)
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: cover
+    svg
+        display: none
 
     
 .menu-wrapper
     user-select: none
     background-color: #F14624
     position: fixed
-    width: calc(100% - 107px)
-    right: 0
+    width: 100%
     z-index: 102
-    height: 100vh
+    height: calc(100vh - 73px)
     overflow-y: auto
-    transform: translateX(100%)
     transition: .5s ease
-    padding-top: 46px
-    padding-left: 10px
-    padding-right: 10px
-    display: flex
+    display: none
     flex-direction: column
-    padding-bottom: 20px
-    opacity: 0
-    top: 0
-    visibility: hidden
+    top: 73px
+    left: 0
     .btn
-        max-width: 236px
+        max-width: 100%
     .menu-toggler
         right: 10px
         top: 24.5px
@@ -363,19 +352,22 @@
             position: absolute
             top: 1px
             left: 0
+    .btn-call
+        margin-bottom: 20px
     nav
+        margin-top: 10px
         ul
             li
-                margin-bottom: 30px
+                margin-bottom: 20px
                 a
+                    text-align: center
+                    color: #FFFFFF
+                    text-decoration: none
                     font-style: normal
                     font-weight: 400
                     font-size: 16px
                     line-height: 20px
                     text-align: center
-                    text-transform: uppercase
-                    color: #FFFFFF
-                    text-decoration: none
 
                 >.sub
                     padding-left: 20px
@@ -419,8 +411,6 @@
         font-size: 18px
         line-height: 160%
         color: #FFFFFF
-        width: 236px
-        max-width: 236px
         margin-bottom: 30px
     .btn-tel
         margin-bottom: 20px
@@ -436,13 +426,65 @@
         li
             margin-left: 0
             margin-right: 20px
-
-
+    
+    .container, .row
+        height: 100%
+    &__inner
+        height: 100%
+        display: flex
+        flex-direction: column
 .menu-openned
+    .header
+        background-color: #F14624
+        .header-top
+            background-color: #F14624
+        .logo-container
+            .logo
+                &:after
+                    background-color: #fff
+                svg
+                    path
+                        fill: #fff !important
+            .logo-text
+                color: #fff
+                div
+                    color: #fff
     .menu-wrapper
-        visibility: visible
-        opacity: 1
-        transform: translateX(0)
+        display: flex
+
+.soc-bar
+    position: fixed
+    height: 85px
+    border-top: 1px solid #F14624
+    width: 100%
+    bottom: 0
+    left: 0
+    display: flex
+    z-index: 10
+    background-color: #fff
+    justify-content: space-around
+    padding-top: 16px
+    display: none
+    &__item
+        text-decoration: none
+        text-align: center
+        width: 80px
+        &-icon
+            display: inline-flex
+            width: 33px
+            height: 32px
+            border-radius: 50%
+            svg
+                margin: auto
+        &-text
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 17px
+            text-align: center
+            color: #4F4C4D
+
+
 
 +media-breakpoint-down(xl)
     .header 
@@ -522,4 +564,5 @@
         
 
 
-        
+    .soc-bar
+        display: flex

@@ -1168,6 +1168,40 @@ a.loc:hover
         color: #fff    
 
 
+.cat-btns
+    display: flex
+    flex-wrap: wrap
+    margin-left: -10px
+    margin-right: -10px
+    margin-bottom: 60px
+    &__item
+        min-width: 265px
+        max-width: 265px
+        text-decoration: none !important
+        font-style: normal
+        font-weight: 500
+        font-size: 20px
+        line-height: 130%
+        color: #4F4C4D
+        transition: .3s ease
+        border: 1px solid #4F4C4D
+        border-radius: 5px
+        background-color: #fff
+        text-align: center
+        padding-top: 19px
+        padding-bottom: 19px
+        margin-left: 10px
+        margin-right: 10px
+        margin-bottom: 20px
+        &:hover
+            border-color: #F14624
+            color: #F14624
+        &.active
+            color: #fff
+            border-color: #F14624
+            background-color: #F14624
+
+
 .pagination
     display: flex
     justify-content: center
@@ -1272,6 +1306,14 @@ a.loc:hover
 
         .heading_sm
             font-size: 20px
+
+    .cat-btns
+        &__item
+            min-width: 220px
+            max-width: 220px
+            padding-top: 16px
+            padding-bottom: 16px
+            font-size: 14px
 +media-breakpoint-down(lg)
     .heading
         &_md
@@ -1451,6 +1493,38 @@ a.loc:hover
             img
                 width: 100%
                 height: auto
+
+    .cat-btns
+        overflow-x: auto
+        flex-wrap: nowrap
+        margin-left: 0
+        margin-right: 0
+        -ms-overflow-style: none
+        scrollbar-width: none
+        margin-bottom: 40px
+        &__item
+            margin-left: 0
+            margin-right: 20px
+            padding-top: 14px
+            padding-bottom: 14px
+            &:last-child
+                margin-right: 0
+
+    .cat-btns::-webkit-scrollbar
+        display: none
+
+
+    .cat-btns.cat-btns_straight
+        flex-wrap: wrap
+        margin-left: -10px
+        margin-right: -10px
+        .cat-btns__item
+            min-width: calc(50% - 20px)
+            max-width: calc(50% - 20px)
+            margin-left: 10px
+            margin-right: 10px
+
+
 +media-breakpoint-down(sm)
     .heading_lg
         font-size: 28px
@@ -1473,3 +1547,6 @@ a.loc:hover
     .col-xs-6
         width: 50%
     
+    .cat-btns.cat-btns_straight
+        .cat-btns__item
+            font-size: 13px

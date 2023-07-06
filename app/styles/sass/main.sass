@@ -222,6 +222,9 @@
             padding-bottom: 0
             border: 0
 
+    &_delivery
+        padding-bottom: 60px
+
 .section-blog
     padding-top: 80px
     padding-bottom: 80px
@@ -799,14 +802,18 @@
     .car
         width: 476px
         position: absolute
-        left: -120px
-        top: 170px
+        left: -80px
+        top: 100px
+        z-index: 2
     .map
+        position: relative
+        left: 50px
         width: 860px
         display: flex
         margin-left: auto
         
-
+    .map-img
+        position: relative
 .section-calc
     padding-top: 80px
     padding-bottom: 100px
@@ -892,6 +899,21 @@
             margin-top: auto
             margin-bottom: auto
 
+.section-delivery-text
+    padding-bottom: 80px
+    img
+        max-width: 100%
+        height: auto
+    .heading_sm
+        margin-bottom: 30px
+    .iconned-text
+        margin-bottom: 30px
+    .row-2
+        .iconned-text
+            margin-bottom: 20px
+
+    .heading_2
+        margin-top: 40px
 .section-showcase
     .row-1
         padding-top: 80px
@@ -1056,6 +1078,10 @@
         ul
             li
                 font-size: 16px
+
+    .section-delivery
+        .map
+            left: 0
 +media-breakpoint-down(lg)
     .section-intro
         .main-slider
@@ -1191,6 +1217,12 @@
     .section-subcat
         padding-top: 60px
         padding-bottom: 20px
+
+    .section-delivery-text
+        padding-bottom: 60px
+        .col-calc
+            margin-top: 30px
+
 +media-breakpoint-down(md)
 
     .section-intro

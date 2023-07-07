@@ -339,10 +339,10 @@
     height: calc(100vh - 73px)
     overflow-y: auto
     transition: .5s ease
-    display: none
+    display: flex
     flex-direction: column
-    top: 73px
-    left: 0
+    translate: 0.3s ease
+    transform: translateY(-100%)
     .btn
         max-width: 100%
     .menu-toggler
@@ -450,7 +450,7 @@
                 div
                     color: #fff
     .menu-wrapper
-        display: flex
+        transform: translateY(73px)
 
 .soc-bar
     position: fixed
@@ -566,3 +566,7 @@
 
     .soc-bar
         display: flex
+
+
+    .header
+        z-index: 103 !important

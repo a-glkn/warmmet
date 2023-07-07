@@ -33,6 +33,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    let mobMainSlider = document.querySelectorAll('.mob-main-slider');
+
+    if(mobMainSlider) {
+        new Swiper(".mob-main-slider", {
+            loop: true,
+            effect: 'fade',
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.mob-main-slider .swiper-pagination'
+            },
+        });
+    }
+
+
+    
+
 
     let socSlider = document.querySelectorAll('.soc-slider');
 

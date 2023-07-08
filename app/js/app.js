@@ -131,6 +131,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    let sectionIntroMob = document.querySelector('.section-intro-mob');
+
+    if( sectionIntroMob ) {
+        if(window.scrollY > sectionIntroMob.offsetHeight / 3) {
+            document.body.classList.add('soc-bar-shown');
+        } else {
+            document.body.classList.remove('soc-bar-shown');
+        }
+    } else {
+        document.body.classList.add('soc-bar-shown');
+    }
 
     if(window.scrollY > 98) {
         document.body.classList.add('header-fixed');
@@ -141,6 +152,16 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.add('header-fixed');
         } else {
             document.body.classList.remove('header-fixed');
+        }
+        
+        if( sectionIntroMob ) {
+            if(window.scrollY > sectionIntroMob.offsetHeight / 3) {
+                document.body.classList.add('soc-bar-shown');
+            } else {
+                document.body.classList.remove('soc-bar-shown');
+            }
+        } else {
+            document.body.classList.add('soc-bar-shown');
         }
     });
 

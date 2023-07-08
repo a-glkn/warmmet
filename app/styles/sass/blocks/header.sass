@@ -459,7 +459,7 @@
     width: 100%
     bottom: 0
     left: 0
-    display: flex
+    transition: .3s ease
     z-index: 100
     background-color: #fff
     justify-content: space-around
@@ -562,10 +562,13 @@
                 path
                     stroke: $accent
         
-
-
     .soc-bar
-        display: flex
+        display: flex !important
+        transform: translateY(100%)
+
+    .soc-bar-shown .soc-bar
+        transform: translateY(0%)
+
 
 
     .header

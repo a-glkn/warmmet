@@ -900,7 +900,7 @@
             height: auto
 
     .swiper-pagination
-        margin: 20px 0
+        margin: 20px 0 0
         width: 100%
         position: static
         display: flex
@@ -917,6 +917,11 @@
             flex-grow: 1
             &-active
                 opacity: 1 !important
+
+    &.no-pagination
+        .swiper-pagination
+            display: none !important
+
 .section-intro-mob
     padding-top: 20px + 73px
     padding-bottom: 0
@@ -924,12 +929,13 @@
     .heading
         font-style: normal
         font-weight: 600
-        font-size: 27px
+        font-size: 24px
         line-height: 130%
         color: #4F4C4D
+    
     .mob-main-slider
         margin-top: 20px
-    .btn-cat
+    .btn
         margin-top: 20px
     .features
         margin-top: 60px

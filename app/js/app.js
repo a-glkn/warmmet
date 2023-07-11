@@ -33,18 +33,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    let mobMainSlider = document.querySelectorAll('.mob-main-slider');
+    let mobMainSlider = document.querySelector('.mob-main-slider');
 
     if(mobMainSlider) {
+
+        var mobMainSliderCount = mobMainSlider.querySelectorAll('.mob-main-slider__item').length;
+        
+        if(mobMainSliderCount < 2) {
+            mobMainSlider.classList.add('no-pagination')
+        }
+
         new Swiper(".mob-main-slider", {
             loop: true,
             effect: 'fade',
             autoplay: {
                 delay: 5000,
             },
-            pagination: {
-                el: '.mob-main-slider .swiper-pagination'
-            },
+            pagination: (mobMainSliderCount > 1) ? {el: '.mob-main-slider .swiper-pagination'} : false,
         });
     }
 

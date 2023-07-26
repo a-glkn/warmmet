@@ -4,6 +4,135 @@
 @import config
 @import 'blocks/**/*'
 
+.section-showroom-intro
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    height: 969px
+    position: relative
+    header
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 3
+        .header-cont
+            position: relative
+            .logo
+                width: 420px
+                height: 98px
+                position: absolute
+                left: 0
+                top: 26px
+                svg
+                    width: 420px
+                    height: 98px
+
+            .header-contacts
+                position: absolute
+                right: 0
+                top: 42px
+                display: flex
+                .wa
+                    margin-top: auto
+                    margin-bottom: auto
+                    margin-right: 20px
+                .c_mail
+                    margin-left: 30px
+                .c
+                    display: flex
+                    &__icon
+                        width: 30px
+                        height: 30px
+                        margin-top: auto
+                        margin-bottom: auto
+                        margin-right: 10px
+                    &__cont
+                        margin-top: auto
+                        margin-bottom: auto
+                        a
+                            font-style: normal
+                            font-weight: 400
+                            font-size: 20px
+                            line-height: 31px
+                            color: #FFFFFF
+                            text-decoration: none
+                        div
+                            font-style: normal
+                            font-weight: 400
+                            font-size: 14px
+                            line-height: 22px
+                            color: #FAFAFA
+                            opacity: 0.7
+
+    .head
+        color: #FFFFFF
+        text-shadow: 0px 0px 20px rgba(0,0,0,0.5)
+        mark
+            padding: 0 8px
+            padding-bottom: 2px
+            background-color: #F14624
+            color: #fff
+        &_1
+            margin-top: 290px
+            font-style: normal
+            font-weight: 600
+            font-size: 62px
+            line-height: 68px
+            margin-bottom: 21px
+        &_2
+            font-style: normal
+            font-weight: 600
+            font-size: 54px
+            line-height: 59px
+            margin-bottom: 18px
+        &_3
+            font-style: normal
+            font-weight: 600
+            font-size: 63px
+            line-height: 69px
+            margin-bottom: 11px
+        &_4
+            font-style: normal
+            font-weight: 600
+            font-size: 70px
+            line-height: 77px
+    button
+        border: 0
+        font-style: normal
+        font-weight: 600
+        font-size: 42px
+        letter-spacing: 0.5px
+        color: #FFFFFF
+        padding: 25.95px 43.42px 27.05px 44.58px
+        background: #F04623
+        box-shadow: 0px 0px 50px 5px #000000
+        border-radius: 4px
+        transition: .3s ease
+        &:hover
+            background-color: #db2e0b
+
+
+    .more
+        font-style: normal
+        font-weight: 400
+        font-size: 30px
+        line-height: 36px
+        color: rgba(255,255,255,0.5)
+        display: inline-block
+        position: relative
+        margin-left: 20px
+        top: 10px
+        &-arr
+            width: 101px
+            height: 98px
+            position: absolute
+            right: -106px
+            bottom: -93px
+
+    .btns
+        margin-top: 46px
+
 
 .section-intro
     height: 1112px
@@ -150,6 +279,91 @@
                 font-size: 16px
                 line-height: 21px
                 color: #B5B5B5
+
+            &_g
+                position: relative
+                &:after
+                    position: absolute
+                    top: 3px
+                    left: 50%
+                    margin-left: -90px
+                    content: ''
+                    display: block
+                    width: 179px
+                    height: 91px
+                    filter: blur(20.5px)
+                    background: #000000
+                    border-radius: 50px
+
+                .chars__item-val
+                    position: relative
+                    z-index: 2
+
+
+    &_old
+        height: 865px
+        .intro-mob
+            display: none
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: auto
+
+        .container
+            position: relative
+            z-index: 5
+        .breadcrumbs
+            color: #9C9C9C
+            margin-top: 27px
+            margin-bottom: 57px
+            a
+                color: #9C9C9C
+                &:hover
+                    color: #fff
+
+        .cont
+            width: 100%
+            margin-top: 145px
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+
+        .heading-1
+            font-style: normal
+            font-weight: 700
+            font-size: 56px
+            line-height: 64px
+            color: #FFFFFF
+            white-space: nowrap
+
+        .heading-2
+            font-style: normal
+            font-weight: 700
+            font-size: 62px
+            line-height: 71px
+            color: #F14624
+            white-space: nowrap
+        .heading-3
+            font-style: normal
+            font-weight: 700
+            font-size: 47px
+            line-height: 73px
+            color: #FFFFFF
+            white-space: nowrap
+        .heading-price
+            font-style: normal
+            font-weight: 600
+            font-size: 30px
+            line-height: 47px
+            color: #FFFFFF
+            margin-top: 65px
+            margin-bottom: 20px
+
+        .chars
+            margin-top: 50px
+
+
 
 
 .section-intro
@@ -1063,7 +1277,9 @@
             margin-bottom: 15px
             &-text
                 font-size: 18px
-
+        &_old
+            height: 865px
+            min-height: 865px
     .section-intro
         &_short
             min-height: auto
@@ -1082,6 +1298,16 @@
             .swiper-pagination
                 margin-left: -470px
 
+        &_old
+            height: 815px
+            min-height: 815px
+            .headings
+                transform-origin: 0 0
+                transform: scale(0.72)
+
+            .heading-price
+                margin-top: 0
+                
     .section-about 
         .about 
             .heading-name
@@ -1153,6 +1379,28 @@
     .section-delivery
         .map
             left: 0
+
+
+
+    .section-showroom-intro
+        height: 969px
+        .main-part
+            transform: scale(0.9)
+            transform-origin: 0 0
+        header
+            .logo
+                transform: scale(0.85)
+                transform-origin: 0 0
+            .header-cont
+                .header-contacts
+                    flex-wrap: wrap
+                    width: 330px
+                    .wa
+                        margin-right: 20px
+                    .c_mail
+                        margin-left: 52px
+                       
+
 +media-breakpoint-down(lg)
     .section-intro
         .main-slider
@@ -1164,6 +1412,99 @@
             .swiper-pagination
                 margin-left: -350px
         
+        &_old
+            display: block !important
+            height: auto
+            min-height: auto !important
+            padding-top: 73px
+            .breadcrumbs
+                position: absolute
+                left: 10px
+                top: -221px
+                font-size: 12px
+                display: block !important
+            .cont
+                margin-top: 0
+                padding-top: 221px
+                padding-bottom: 61px
+                background: #000 !important
+            .headings
+                transform: scale(1)
+            .heading-1
+                white-space: normal
+                margin-bottom: 0
+                font-style: normal
+                font-weight: 700
+                font-size: 24px
+                line-height: 28px
+                display: inline
+
+
+            .heading-2
+                white-space: normal
+                display: inline
+                font-style: normal
+                font-weight: 700
+                font-size: 21px
+                line-height: 27px
+
+            .heading-3
+                white-space: normal
+                display: inline
+                font-style: normal
+                font-weight: 700
+                font-size: 22px
+                line-height: 29px
+
+            .intro-mob
+                display: block
+
+            .heading-price
+                font-style: normal
+                font-weight: 600
+                font-size: 20px
+                line-height: 31px
+                margin-top: 36px
+                margin-bottom: 19px
+
+            .chars
+                margin-top: 21px
+                flex-direction: column
+                &__item
+                    text-align: left !important
+                    display: flex
+                    margin-bottom: 14px !important
+                    &-val
+                        white-space: nowrap
+                        margin-top: auto
+                        margin-bottom: auto
+                        margin-right: 6px
+                        font-size: 18px
+                    &-key
+                        white-space: nowrap
+                        margin-top: auto
+                        margin-bottom: auto
+                        font-size: 16px
+                    &_g
+                        &:after
+                            display: none
+                        br
+                            display: none
+
+            .btn-text
+                border: 0
+                padding-left: 0
+                padding-right: 0
+                font-style: normal
+                font-weight: 500
+                font-size: 14px
+                line-height: 22px
+                margin-top: 17px
+            .btn-block
+                flex-direction: column
+            .btn
+                border-radius: 5px !important
+                width: 100% !important
 
     .section-contacts
         .col-map
@@ -1299,6 +1640,82 @@
     .section-intro
         display: none
 
+
+    .section-showroom-intro
+        height: auto
+        padding-bottom: 68px
+        header
+            .header-cont
+                .logo
+                    top: 34px
+                    svg
+                        width: 275px
+                        height: 64px
+                        
+        .main-part
+            transform: scale(1)
+        header
+            .logo
+                transform: scale(1)
+            .header-cont
+                .header-contacts
+                    display: none
+
+
+
+        .head
+            &_1
+                margin-top: 172px
+                margin-bottom: 12px
+                font-size: 21px
+                line-height: 23px
+            &_2
+                font-size: 18px
+                line-height: 20px
+                margin-bottom: 12px
+            &_3
+                font-size: 21px
+                line-height: 23px
+                margin-bottom: 10px
+                
+            &_4
+                font-size: 23px
+                line-height: 25px
+
+        button
+            width: 301px
+            height: 67px
+            font-size: 22px
+            line-height: 34px
+            padding: 0
+        
+        .more
+            margin-top: 22px
+            margin-left: 0
+            top: 0
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            line-height: 22px
+            height: 85px
+            display: inline-block
+            width: 130px
+            text-align: right
+            &-arr
+                width: 65px
+                height: 63px
+                right: -77px
+                bottom: auto
+                top: 22px
+                svg
+                    width: 65px
+                    height: 63px
+
+
+        .btns
+            margin-top: 25px
+            flex-direction: column
+            display: inline-flex
 +media-breakpoint-down(md)
 
     .section-intro

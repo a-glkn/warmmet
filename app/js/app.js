@@ -14,6 +14,32 @@ document.addEventListener('DOMContentLoaded', () => {
     var im = new Inputmask("+7 (999) 999 99 99");
     im.mask(selector);
 
+    let oldBgSlider = document.querySelectorAll('.old-bg-slider');
+
+    if(oldBgSlider) {
+        new Swiper(".old-bg-slider", {
+            loop: true,
+            slidesPerView: 1,
+            allowTouchMove: false,
+            autoplay: {
+                delay: 5000,
+            },
+        });
+    }
+
+    let oldElSlider = document.querySelectorAll('.old-el-slider');
+
+    if(oldElSlider) {
+        new Swiper(".old-el-slider", {
+            loop: true,
+            slidesPerView: 1,
+            allowTouchMove: false,
+            autoplay: {
+                delay: 5000,
+            },
+        });
+    }
+
     let mainSlider = document.querySelectorAll('.main-slider');
 
     if(mainSlider) {

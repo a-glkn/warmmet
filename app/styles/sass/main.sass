@@ -134,6 +134,36 @@
         margin-top: 46px
 
 
+.old-bg-slider
+    height: 770px
+    &__item
+        height: 770px
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+
+.old-el-slider
+    overflow: hidden
+    &__item
+        img
+            max-width: 100%
+            height: auto
+        div
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 22px
+            text-align: center
+            color: #FFFFFF
+            position: absolute
+            width: 100%
+            bottom: 39px
+            text-transform: uppercase
+            left: 0
+
+
+
+
 .section-intro
     height: 1112px
     display: flex
@@ -328,7 +358,7 @@
             background-repeat: no-repeat
             background-position: center
             background-size: cover
-
+            position: relative
         .heading-1
             font-style: normal
             font-weight: 700
@@ -336,7 +366,7 @@
             line-height: 64px
             color: #FFFFFF
             white-space: nowrap
-
+            text-shadow: 0px 0px 20px rgba(0,0,0,0.5)
         .heading-2
             font-style: normal
             font-weight: 700
@@ -344,6 +374,7 @@
             line-height: 71px
             color: #F14624
             white-space: nowrap
+            text-shadow: 0px 0px 20px rgba(0,0,0,0.5)
         .heading-3
             font-style: normal
             font-weight: 700
@@ -351,6 +382,7 @@
             line-height: 73px
             color: #FFFFFF
             white-space: nowrap
+            text-shadow: 0px 0px 20px rgba(0,0,0,0.5)
         .heading-price
             font-style: normal
             font-weight: 600
@@ -359,9 +391,64 @@
             color: #FFFFFF
             margin-top: 65px
             margin-bottom: 20px
-
+            text-shadow: 0px 0px 20px rgba(0,0,0,0.5)
         .chars
             margin-top: 50px
+
+
+    &_old-main
+        height: 915px
+        overflow-x: hidden
+        .wrap
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 2
+            padding-top: 80px
+            max-width: 100% !important
+        .title
+            font-style: normal
+            font-weight: 700
+            font-size: 39px
+            line-height: 48px
+            color: #FFFFFF
+            margin-bottom: 35px
+            margin-top: 97px
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        .btn-1
+            width: 320px
+            height: 56px
+            background: #F14624
+            font-style: normal
+            font-weight: 600
+            font-size: 15px
+            line-height: 23px
+            color: #FFFFFF
+            border: 0
+            margin-top: 35px
+            transition: .3s ease
+            &:hover
+                background-color: #db2e0b
+
+        .btn-2
+            text-decoration: none
+            display: inline-block
+            margin-top: 15px
+            width: 320px
+            height: 56px
+            background: #FFFFFF
+            border: 2px solid #F14624 !important
+            font-style: normal
+            font-weight: 600
+            font-size: 15px
+            line-height: 56px
+            color: #F14624
+            transition: .3s ease
+            text-align: center
+            &:hover 
+                background-color: #db2e0b
+                border-color: #f14624 !important
+                color: #ffffff
 
 
 
@@ -1280,6 +1367,9 @@
         &_old
             height: 865px
             min-height: 865px
+        &_old-main
+            height: 915px
+            min-height: 915px
     .section-intro
         &_short
             min-height: auto
@@ -1307,6 +1397,17 @@
 
             .heading-price
                 margin-top: 0
+
+        &_old-main
+            height: 915px
+            min-height: 915px
+            .title
+                font-size: 27px
+                line-height: 32px
+                margin-bottom: 25px
+                margin-top: 100px
+            .btn-1
+                margin-top: 25px
                 
     .section-about 
         .about 
@@ -1379,7 +1480,6 @@
     .section-delivery
         .map
             left: 0
-
 
 
     .section-showroom-intro
@@ -1506,6 +1606,37 @@
                 border-radius: 5px !important
                 width: 100% !important
 
+
+        &_old-main
+            height: auto !important
+            min-height: auto !important
+            padding-top: 0 
+            padding-bottom: 0 !important
+            .cont
+                padding-top: 73px
+                height: auto
+                padding-bottom: 0
+                height: 100%
+            .title
+                margin-top: 53px
+                font-size: 30px
+                line-height: 35px
+                margin-bottom: 16px
+            .wrap
+                position: static
+                padding-top: 80px
+
+            .btn-1
+                margin-top: 15px
+    
+    .old-bg-slider
+        height: 100%
+        position: absolute
+        top: 73px
+        left: 0
+        width: 100%
+        &__item
+            height: 100%
     .section-contacts
         .col-map
             margin-top: 40px

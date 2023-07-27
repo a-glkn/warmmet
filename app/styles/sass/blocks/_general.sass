@@ -426,6 +426,31 @@ ul.check-list
 
 
 
+.old-list
+    li
+        font-style: normal
+        font-weight: 400
+        font-size: 26px
+        line-height: 39px
+        color: #FFFFFF
+        padding-left: 37px
+        position: relative
+        strong
+            font-weight: 700
+        &:before
+            position: absolute
+            left: 0
+            top: 50%
+            margin-top: -12.5px
+            content: ''
+            width: 25px
+            height: 25px
+            background-repeat: no-repeat
+            background-position: center
+            background-image: url(../images/dist/ch.png)
+            background-size: cover
+
+
 .text-block
     background-color: #F7F7F7
     font-style: normal
@@ -1358,6 +1383,12 @@ a.loc:hover
             padding-top: 16px
             padding-bottom: 16px
             font-size: 14px
+
+    .old-list
+        li
+            font-size: 22px
+            line-height: 33px
+            
 +media-breakpoint-down(lg)
     .heading
         &_md
@@ -1454,6 +1485,13 @@ a.loc:hover
 
     .iconned-text
         font-size: 16px
+
+
+    .old-list
+        li
+            font-size: 18px
+            line-height: 27px
+            margin-bottom: 5px
 +media-breakpoint-down(md)
     .typo
         h1

@@ -65,8 +65,14 @@
     .contacts
         display: flex
         margin: auto 0
+        flex-direction: column
         .contact-item_mail
-            margin-right: 20px
+            margin-right: 0
+            margin-bottom: 10px
+
+    .btn-connect
+        margin-top: 19px
+        margin-bottom: 19px
 
     .contact-item
         &__icon
@@ -91,7 +97,7 @@
     
     .menu-toggler
         display: none
-        top: 24.5px
+        top: 11.5px
         right: 0
         svg
             position: absolute
@@ -199,8 +205,8 @@
 
 
 .menu-toggler
-    width: 24px
-    height: 25px
+    width: 50px
+    height: 50px
     position: absolute
     cursor: pointer
     z-index: 103
@@ -291,7 +297,9 @@
         .contacts
             a
                 color: #4F4C4D
-
+        .btn-connect
+            border-color: $accent !important
+            color: $accent !important
     .menu
         ul
             li
@@ -532,7 +540,8 @@
         .contacts
             a
                 color: #4F4C4D
-                
+        .btn-connect
+            display: none
         .logo-container
             .logo
                 width: 113.5px

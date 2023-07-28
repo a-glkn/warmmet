@@ -17,7 +17,7 @@
 
 </head>
 
-<body class="header-colored">
+<body>
 
 	<header class="header">
 		<div class="header-top">
@@ -112,10 +112,12 @@
 									</div>
 								</div>
 							</div>
+
+							<button class="btn btn-connect btn_light-4">Связаться</button>
 	
 							<div class="menu-toggler">
-								<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M4 6.5H20M4 12.5H20M4 18.5H20" stroke="#F14624" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 15H38M12 25H38M12 35H38" stroke="#F14624" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 								</svg>
 							</div>
 						</div>
@@ -798,31 +800,61 @@
 <section class="section-showroom">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8">
+			<div class="col-lg-9">
 				<div class="heading heading_md">Шоу-румы</div>
 				<div class="heading heading_sm">Запишитесь на экскурсию в наши шоу-румы и получите скидку до <span class="text-accent">20%</span> и другие специальные условия!</div>
 			</div>
 		</div>
 		<div class="row row-content">
 			<div class="col-lg-6">
-				<div class="showroom">
-					<img src="images/dist/sh-1.jpg" alt="">
-					<div class="heading heading_sm">Санкт-Петербург</div>
-					<ul class="list">
-						<li>ул. Кирочная, 22</li>
-						<li>Ул. Лисичанская, 6, офис 35 (БЦ Инком)</li>
-					</ul>
-				</div>
+				<a href="#" class="loc">
+					<div class="loc__img">
+						<img src="images/dist/spb.jpg" alt="">
+					</div>
+
+					<div class="loc__content">
+						<div class="heading heading_sm">Санкт-Петербург</div>
+						<ul>
+							<li>ул. Кирочная, 22</li>
+							<li>Ул. Лисичанская, 6, офис 35 (БЦ Инком)</li>
+						</ul>
+						
+						<div class="loc__more">
+							<div class="loc__more-text">Записаться</div>
+							<div class="loc__more-icon">
+								<svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M60.3536 4.17387C60.5488 3.9786 60.5488 3.66202 60.3536 3.46676L57.1716 0.284779C56.9763 0.0895164 56.6597 0.0895164 56.4645 0.284779C56.2692 0.480041 56.2692 0.796623 56.4645 0.991885L59.2929 3.82031L56.4645 6.64874C56.2692 6.844 56.2692 7.16058 56.4645 7.35585C56.6597 7.55111 56.9763 7.55111 57.1716 7.35585L60.3536 4.17387ZM0 4.32031H60V3.32031H0V4.32031Z" fill="#F14624"/>
+								</svg>
+							</div>
+						</div>
+					</div>
+					
+				</a>
+
 			</div>	
 
 			<div class="col-lg-6">
-				<div class="showroom">
-					<img src="images/dist/sh-2.jpg" alt="">
-					<div class="heading heading_sm">Москва</div>
-					<ul class="list">
-						<li>ул. Ленинская Слобода, 19, 4 этаж, офис 4047 (БЦ Омега Плаза)</li>
-					</ul>
-				</div>
+				<a href="" class="loc">
+					<div class="loc__img">
+						<img src="images/dist/msk.jpg" alt="">
+					</div>
+
+					<div class="loc__content">
+						<div class="heading heading_sm">Москва</div>
+						<ul>
+							<li>ул. Ленинская Слобода, 19, 4 этаж, офис 4047 (БЦ Омега Плаза)</li>
+						</ul>
+
+						<div class="loc__more">
+							<div class="loc__more-text">Записаться</div>
+							<div class="loc__more-icon">
+								<svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M60.3536 4.17387C60.5488 3.9786 60.5488 3.66202 60.3536 3.46676L57.1716 0.284779C56.9763 0.0895164 56.6597 0.0895164 56.4645 0.284779C56.2692 0.480041 56.2692 0.796623 56.4645 0.991885L59.2929 3.82031L56.4645 6.64874C56.2692 6.844 56.2692 7.16058 56.4645 7.35585C56.6597 7.55111 56.9763 7.55111 57.1716 7.35585L60.3536 4.17387ZM0 4.32031H60V3.32031H0V4.32031Z" fill="#F14624"/>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</a>
 			</div>	
 		</div>
 	</div>
@@ -831,7 +863,7 @@
 <section class="section-capture">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 inverted">
+			<div class="col-lg-5 inverted">
 				<div class="capture-block">
 					<div class="heading heading_md">Остались вопросы?</div>
 					<div class="text">
@@ -841,8 +873,65 @@
 						<input type="text" class="form__input" placeholder="Ваше имя">
 						<input type="tel" class="form__input form__input_tel" placeholder="Ваш телефон">
 	
-						<div class="btn">Оставить заявку</div>
+						<div class="btn btn_w-100p">Оставить заявку</div>
+
+						<div class="form__policy">
+							Нажимая на кнопку "Отправить заявку" Вы соглашаетесь с <a href="#">Политикой конфиденциальности</a> и <a href="#">Пользовательским соглашением</a>
+						</div>
 					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-faq bg-grey">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="heading heading_md">Частые вопросы</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="faq">
+					<div class="row">
+						<div class="col-md-5">
+							<div class="faq__title">Доставка в Казахстан это дорого?</div>
+						</div>
+						<div class="col-md-7">
+							<div class="faq__cont">
+								<p>Нет. Доставка осуществляется транспортной компанией Байкал Сервис. Республика Казахстан входит в таможенный союз, поэтому стоимость доставки будет не дороже доставки по России на такое же расстояние.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="faq">
+					<div class="row">
+						<div class="col-md-5">
+							<div class="faq__title">Сколько дней длится доставка?</div>
+						</div>
+						<div class="col-md-7">
+							<div class="faq__cont">
+								<p>Зависит от удаленности населенного пункта. Доставка в Алматы займет от 11 до 15 дней.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="faq">
+					<div class="row">
+						<div class="col-md-5">
+							<div class="faq__title">Как с Вами связаться?</div>
+						</div>
+						<div class="col-md-7">
+							<div class="faq__cont">
+								<p>Вы можете позвонить нам, написать в WhatsApp или Telegram, или оставить заявку и мы Вам перезвоним.</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1040,6 +1129,10 @@
 		<div class="tabs">
 			<div class="row row-tabs">
 				<div class="col-lg-5">
+					<div class="heading heading-sm heading_sm">Не знаете, как подобрать дизайн-радиатор?</div>
+					
+					<p>Свяжитесь с нами удобным для Вас способом: звонок, WhatsApp или Telegram. Ответим на все вопросы и подберем радиатор индивидуально под ваше помещение!</p>
+
 					<div class="tab-head">
 						<div class="tab-head__item active">Москва</div>
 						<div class="tab-head__item">Санкт-Петербург</div>
@@ -1125,7 +1218,7 @@
 						</div>
 
 						<div class="col-lg-7 col-map">
-							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6f446c71fd9b5afe25229c7c5866feebce831a598562b11fbe7ecb76956e84b3&amp;width=100%25&amp;height=515&amp;lang=ru_RU&amp;scroll=false"></script>
+							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6f446c71fd9b5afe25229c7c5866feebce831a598562b11fbe7ecb76956e84b3&amp;width=100%25&amp;height=692&amp;lang=ru_RU&amp;scroll=false"></script>
 						</div>
 					</div>
 				</div>
@@ -1194,7 +1287,7 @@
 						</div>
 
 						<div class="col-lg-7 col-map">
-							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab618035a9afe894880875100be0b05c98c154eaec8720ea9a009ddf6b9bfad0f&amp;width=100%25&amp;height=515&amp;lang=ru_RU&amp;scroll=false"></script>
+							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab618035a9afe894880875100be0b05c98c154eaec8720ea9a009ddf6b9bfad0f&amp;width=100%25&amp;height=692&amp;lang=ru_RU&amp;scroll=false"></script>
 						</div>
 					</div>
 				</div>

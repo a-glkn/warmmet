@@ -869,8 +869,27 @@
         right: 0
 .section-certs
     padding: 80px 0
+    .certs-bg
+        position: relative
+        padding-top: 300px
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            height: 437px
+            width: 100%
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: center
+            background-image: url(../images/dist/cert-bg.jpg)
     .heading_md
-        margin-bottom: 50px
+        padding-left: 80px
+        color: #fff
+        position: relative
+        z-index: 2
+        margin-bottom: 10px
 
 .showroom
     img
@@ -1899,6 +1918,18 @@
         min-height: auto
         &__title
             font-size: 20px
+
+    .section-certs
+        .certs-bg
+            position: relative
+            padding-top: 200px
+            &:after
+                content: ''
+                display: block
+                position: absolute
+                top: 0
+                left: 0
+                height: 337px
 +media-breakpoint-down(md)
 
     .section-intro
@@ -2062,3 +2093,15 @@
 
         .tab-head
             top: 0
+
+    .section-certs
+        .certs-bg
+            position: relative
+            padding-top: 100px
+            &:after
+                content: ''
+                display: block
+                position: absolute
+                top: 0
+                left: 0
+                height: 237px

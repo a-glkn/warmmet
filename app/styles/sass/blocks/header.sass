@@ -65,10 +65,23 @@
     .contacts
         display: flex
         margin: auto 0
-        flex-direction: column
+        &__item
+            display: flex
+            flex-direction: column
+            .order-btn
+                margin-left: auto
+                text-decoration: none
+                font-size: 14px
+                color: #fff
+                display: inline-block
+                margin-top: 5px
+                transition: .3s ease
+                &:hover
+                    color: $accent
+
         .contact-item_mail
-            margin-right: 0
-            margin-bottom: 10px
+            margin-right: 10px
+            margin-bottom: 0
 
     .btn-connect
         margin-top: 19px
@@ -297,6 +310,9 @@
         .contacts
             a
                 color: #4F4C4D
+
+            .order-btn
+                color: $accent !important
         .btn-connect
             border-color: $accent !important
             color: $accent !important

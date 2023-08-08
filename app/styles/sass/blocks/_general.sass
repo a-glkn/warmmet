@@ -322,12 +322,19 @@ p
     font-size: 14px
     line-height: 17px
     color: #fff
+    white-space: nowrap
+    overflow-x: auto
+    -ms-overflow-style: none
+    scrollbar-width: none
+
     a
         color: #fff
         text-decoration: none
         transition: .3s ease
         &:hover
             color: $accent
+.breadcrumbs::-webkit-scrollbar
+    display: none
 
 .contact-item
     display: flex
@@ -1429,7 +1436,6 @@ a.loc:hover
         h3
             font-size: 28px
     .breadcrumbs
-        display: none
 
     .row-scroll
         display: flex

@@ -4,6 +4,11 @@
 @import config
 @import 'blocks/**/*'
 
+.main-wprapper
+    position: relative
+    width: 100%
+    overflow-x: hidden
+
 .section-showroom-intro
     background-repeat: no-repeat
     background-position: center
@@ -954,7 +959,7 @@
 .main
     padding-top: 145px
     .breadcrumbs
-        padding-top: 60px
+        padding-top: 30px
         padding-bottom: 30px
         color: #919191
         a
@@ -1674,8 +1679,9 @@
             .cont
                 padding-top: 73px
                 height: auto
-                padding-bottom: 0
+                padding-bottom: 80px
                 height: 100%
+                overflow: hidden
             .title
                 margin-top: 53px
                 font-size: 30px
@@ -1932,6 +1938,10 @@
                 top: 0
                 left: 0
                 height: 337px
+
+    .main
+        .breadcrumbs
+            padding-top: 10px
 +media-breakpoint-down(md)
 
     .section-intro

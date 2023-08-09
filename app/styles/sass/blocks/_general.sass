@@ -428,6 +428,19 @@ p
         &_mob
             display: none
 
+    &_mob
+        .quote-block
+            padding: 30px 20px !important
+            &__author
+                margin-top: auto
+                margin-bottom: auto
+            &__img
+                width: 100%
+                img
+                    min-width: 60px
+                    max-width: 60px
+                    margin-right: 10px
+
 
 ul.check-list
     li
@@ -529,6 +542,22 @@ ul.check-list
 
     &_size-3
         height: 271px
+
+    &_size-mob
+        height: auto
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 130%
+        color: #4F4C4D
+        padding: 20px !important
+        .text-block
+            &__title
+                font-style: normal
+                font-weight: 600
+                font-size: 16px
+                line-height: 130%
+                color: #4F4C4D
 
 .text-block_link
     &:hover
@@ -1694,3 +1723,18 @@ a.loc:hover
     .cat-btns.cat-btns_straight
         .cat-btns__item
             font-size: 13px
+
+
+    .text-block
+        
+        &_size-mob
+            height: auto
+            font-size: 15px
+            padding: 10px !important
+            .text-block
+                &__title
+                    font-size: 15px
+
+        &_1
+            padding-left: 20px !important
+            padding-right: 20px !important

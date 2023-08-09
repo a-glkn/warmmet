@@ -1207,6 +1207,22 @@
             margin-bottom: 20px
     &_2
         padding-top: 0
+
+    &_desktop
+
+    &_mob
+        display: none
+        .img
+            margin-bottom: 0 !important
+        img
+            height: 100%
+            width: auto
+
+        .text-block
+            min-height: 100%
+        .col-item
+            margin-bottom: 20px
+
 .section-reasons
     padding: 80px 0
     img
@@ -1807,6 +1823,12 @@
                 object-fit: cover
         &_2
             padding-top: 0
+
+        &_desktop
+            display: none
+        &_mob
+            display: block
+        
     .section-more-colors
         padding-top: 60px
         padding-bottom: 60px  
@@ -2035,6 +2057,9 @@
             font-size: 20px
         &__cont
             border: 0
+
+
+        
 +media-breakpoint-down(sm)
     .section-delivery 
         .car
@@ -2117,3 +2142,5 @@
                 top: 0
                 left: 0
                 height: 237px
+
+
